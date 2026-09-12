@@ -545,3 +545,12 @@ body {
         opacity: 1;
     }
 }
+.place {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.place:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 15px rgba(150, 180, 255, 0.8));
+}
+    
