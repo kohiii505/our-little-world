@@ -191,7 +191,7 @@ body {
         0 0 100px rgba(100, 140, 255, 0.15);
     
     animation: pulse 3s ease-in-out infinite;
-
+}
 .glow {
     position: absolute;
 
