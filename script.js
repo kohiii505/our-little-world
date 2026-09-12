@@ -16,13 +16,19 @@ function openPlace(place) {
     const text = document.getElementById("popup-text");
 
 
+    function openPlace(place) {
+
+    const popup = document.getElementById("popup");
+
+    const title = document.getElementById("popup-title");
+
+    const text = document.getElementById("popup-text");
+
+
     if (place === "home") {
-
-        title.textContent = "HOME";
-
-        text.textContent =
-            "A place for all the things I wish I could tell you in person.";
-
+        document.getElementById("world").style.display = "none";
+        document.getElementById("home-room").style.display = "block";
+        return;
     }
 
 
