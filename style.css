@@ -509,4 +509,18 @@ body {
     opacity: 0.25;
     pointer-events: none;
 }
+}#world::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(150, 180, 255, 0.12);
+    box-shadow:
+        0 0 40px rgba(150, 180, 255, 0.3),
+        0 0 100px rgba(100, 140, 255, 0.15);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
