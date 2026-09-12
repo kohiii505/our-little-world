@@ -615,4 +615,10 @@ body::before {
 .hidden {
     display: none !important;
 }
+.room-window {
+    display: block !important;
+}
 
+.room-bed {
+    display: block !important;
+}
