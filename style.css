@@ -601,5 +601,7 @@ body {
     bottom: 10%;
     font-size: 35px;
 }
-
+.hidden {
+    display: none !important;
+}
 
