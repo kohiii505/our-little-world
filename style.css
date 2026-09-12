@@ -1473,5 +1473,25 @@ body {
         padding: 45px 25px;
     }
 }
-```
+#forest-screen {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: #07140f !important;
+    color: white !important;
+    z-index: 9999 !important;
+}
+
+.forest-heading {
+    position: absolute !important;
+    top: 12% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    width: 90% !important;
+}
+
+.forest-tree {
+    position: absolute !important;
+}
 
