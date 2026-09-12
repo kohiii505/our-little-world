@@ -254,128 +254,101 @@
         </div>
 
     </section>
+<section id="ocean-screen" class="screen">
 
+    <button class="ocean-back" onclick="closeOcean()">
+        ← BACK TO OUR WORLD
+    </button>
 
-    <!-- OCEAN -->
+    <div class="ocean-stars"></div>
+    <div class="ocean-moon"></div>
 
-    <section id="ocean-screen" class="screen">
+    <div class="ocean-title">
+        <p>THE OCEAN</p>
+        <h1>Drift for a while.</h1>
+        <span>There are little things waiting beneath the waves.</span>
+    </div>
 
-        <button class="ocean-back" onclick="closeOcean()">
-            ← BACK TO OUR WORLD
-        </button>
+    <div class="ocean-water"></div>
 
+    <!-- HIDDEN MEMORIES -->
 
-        <div class="ocean-sky"></div>
+    <button class="ocean-discovery discovery-one"
+        onclick="collectOceanItem(this, 'first')">
+        🐚
+    </button>
 
-        <div class="ocean-moon"></div>
+    <button class="ocean-discovery discovery-two"
+        onclick="collectOceanItem(this, 'memory')">
+        ✦
+    </button>
 
+    <button class="ocean-discovery discovery-three"
+        onclick="collectOceanItem(this, 'love')">
+        🫧
+    </button>
 
-        <div class="ocean-heading">
+    <button class="ocean-discovery discovery-four"
+        onclick="collectOceanItem(this, 'future')">
+        ◇
+    </button>
 
-            <p>THE OCEAN</p>
+    <button class="ocean-discovery discovery-five"
+        onclick="collectOceanItem(this, 'little')">
+        🐚
+    </button>
 
-            <h1>Take your time.</h1>
+    <!-- EXTRA BUBBLES -->
 
-            <span>
-                There are little things hidden beneath the waves.
-            </span>
+    <div class="ocean-bubble bubble-a">○</div>
+    <div class="ocean-bubble bubble-b">○</div>
+    <div class="ocean-bubble bubble-c">○</div>
+    <div class="ocean-bubble bubble-d">○</div>
 
-        </div>
+    <div class="ocean-counter">
+        <span id="ocean-count">0</span> / 5 DISCOVERED
+    </div>
 
+    <!-- DISCOVERY MESSAGE -->
 
-        <!-- WAVES -->
-
-        <div class="wave wave-one"></div>
-        <div class="wave wave-two"></div>
-        <div class="wave wave-three"></div>
-
-
-        <!-- COLLECTIBLES -->
-
-        <button
-            class="ocean-item shell shell-one"
-            onclick="collectOceanItem(this, 'first')"
-        >
-            🐚
-        </button>
-
-        <button
-            class="ocean-item shell shell-two"
-            onclick="collectOceanItem(this, 'memory')"
-        >
-            🐚
-        </button>
-
-        <button
-            class="ocean-item starfish"
-            onclick="collectOceanItem(this, 'love')"
-        >
-            ✦
-        </button>
-
-        <button
-            class="ocean-item bubble bubble-one"
-            onclick="collectOceanItem(this, 'future')"
-        >
-            ○
-        </button>
+    <div id="ocean-message">
 
         <button
-            class="ocean-item bubble bubble-two"
-            onclick="collectOceanItem(this, 'little')"
-        >
-            ○
+            class="ocean-message-close"
+            onclick="closeOceanMessage()">
+            ×
         </button>
 
+        <p>YOU FOUND SOMETHING</p>
 
-        <div class="ocean-counter">
-            <span id="ocean-count">0</span> / 5 FOUND
-        </div>
+        <h2 id="ocean-message-title"></h2>
 
+        <span id="ocean-message-text"></span>
 
-        <!-- MESSAGE -->
+    </div>
 
-        <div id="ocean-message">
+    <!-- COMPLETE -->
 
-            <button
-                class="ocean-message-close"
-                onclick="closeOceanMessage()"
-            >
-                ×
-            </button>
+    <div id="ocean-complete">
 
-            <p id="ocean-message-label">
-                SOMETHING FROM THE WAVES
-            </p>
+        <div class="complete-star">✦</div>
 
-            <h2 id="ocean-message-title"></h2>
+        <p>YOU FOUND EVERYTHING</p>
 
-            <p id="ocean-message-text"></p>
+        <h2>
+            You made it to the bottom.
+        </h2>
 
-        </div>
+        <span>
+            And somehow, beneath all these waves,
+            I'd still find my way back to you. ♡
+        </span>
 
+    </div>
 
-        <!-- FINAL MESSAGE -->
+</section>
 
-        <div id="ocean-complete">
-
-            <div class="complete-symbol">✦</div>
-
-            <p>YOU FOUND EVERYTHING</p>
-
-            <h2>
-                I think I'd still find you.
-            </h2>
-
-            <span>
-                Even in an ocean this big,
-                somehow I'd still find my way back to you. ♡
-            </span>
-
-        </div>
-
-    </section>
-
+   
 
     <!-- OBSERVATORY -->
 
