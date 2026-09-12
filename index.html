@@ -12,7 +12,10 @@
 
 <body>
 
-    <!-- INTRO -->
+
+    <!-- =========================
+         INTRO
+    ========================== -->
 
     <div id="intro">
 
@@ -35,16 +38,20 @@
     </div>
 
 
-    <!-- WORLD -->
+
+    <!-- =========================
+         WORLD
+    ========================== -->
 
     <main id="world">
 
         <div class="stars"></div>
 
+
         <div class="moon"></div>
 
 
-        <!-- CENTRAL STAR -->
+        <!-- CENTER LIGHT -->
 
         <div class="center-light">
 
@@ -55,6 +62,7 @@
             </div>
 
         </div>
+
 
 
         <!-- HOME -->
@@ -75,6 +83,7 @@
         </button>
 
 
+
         <!-- FOREST -->
 
         <button
@@ -91,6 +100,7 @@
             </span>
 
         </button>
+
 
 
         <!-- OCEAN -->
@@ -111,6 +121,7 @@
         </button>
 
 
+
         <!-- OBSERVATORY -->
 
         <button
@@ -127,6 +138,7 @@
             </span>
 
         </button>
+
 
 
         <!-- FUTURE -->
@@ -147,7 +159,8 @@
         </button>
 
 
-        <!-- MESSAGE -->
+
+        <!-- WORLD MESSAGE -->
 
         <div class="world-message">
 
@@ -161,7 +174,10 @@
     </main>
 
 
-    <!-- HOME / LETTER -->
+
+    <!-- =========================
+         HOME / LETTER
+    ========================== -->
 
     <div id="home-letter">
 
@@ -183,6 +199,8 @@
                 A little letter for you.
             </h1>
 
+
+            <!-- ENVELOPE -->
 
             <div
                 class="envelope"
@@ -211,183 +229,222 @@
             </p>
 
         </div>
-        
-
-      <!-- OPEN LETTER -->
-
-<div
-    id="letter-content"
-    class="letter-content"
->
-
-    <button
-        class="letter-close"
-        onclick="closeLetter()"
-    >
-        ×
-    </button>
 
 
-    <p class="letter-small">
-        TO MY NANU,
-    </p>
+
+        <!-- OPEN LETTER -->
+
+        <div
+            id="letter-content"
+            class="letter-content"
+        >
+
+            <button
+                class="letter-close"
+                onclick="closeLetter()"
+            >
+                ×
+            </button>
 
 
-    <h2>
-        I know it's been really, really bad
-        these past few weeks.
-    </h2>
+            <p class="letter-small">
+                TO MY NANU,
+            </p>
 
 
-    <p>
-        And I just want to say that I love you
-        so, so much. I don't really know what
-        to say right now, but I'm making this
-        for you and I just wanted you to know
-        that I'm trying.
-    </p>
+            <h2>
+                I know it's been really, really bad
+                these past few weeks.
+            </h2>
 
 
-    <p>
-        I'm sorry for being like this lately.
-        I promise I'll be back to normal.
-        I swear I will. I'm just sick for a while,
-        and tired, and I'm sorry.
-    </p>
+            <p>
+                And I just want to say that I love you
+                so, so much. I don't really know what
+                to say right now, but I'm making this
+                for you and I just wanted you to know
+                that I'm trying.
+            </p>
 
 
-    <p>
-        I spent a really, really long time
-        making this, and I genuinely hope
-        you love it. I hope it lives up to
-        your expectations, because I made
-        every little part of it thinking
-        about you.
-    </p>
+            <p>
+                I'm sorry for being like this lately.
+                I promise I'll be back to normal.
+                I swear I will. I'm just sick for a while,
+                and tired, and I'm sorry.
+            </p>
 
 
-    <p>
-        I hope you love this little world
-        as much as I loved making it for you.
-    </p>
+            <p>
+                I spent a really, really long time
+                making this, and I genuinely hope
+                you love it. I hope it lives up to
+                your expectations, because I made
+                every little part of it thinking
+                about you.
+            </p>
 
-    <p class="letter-ending">
-        I love you so, so much. Mwah. ♡
-    </p>
 
-</div>
+            <p>
+                I hope you love this little world
+                as much as I loved making it for you.
+            </p>
 
-</div>
 
-   <!-- FOREST -->
+            <p class="letter-ending">
+                I love you so, so much. Mwah. ♡
+            </p>
 
-<div id="forest-screen" style="display: block !important; position: fixed !important; inset: 0 !important; z-index: 9999 !important; background: #07140f !important;">
-
-    <button
-        class="forest-back"
-        onclick="closeForest()"
-    >
-        ← BACK TO OUR WORLD
-    </button>
-
-    <div class="forest-title">
-
-        <p>
-            THE FOREST
-        </p>
-
-        <h1>
-            Stay here for a while.
-        </h1>
+        </div>
 
     </div>
 
 
-    <div class="forest-trees">
 
-        <div class="tree tree-one">♣</div>
-        <div class="tree tree-two">♣</div>
-        <div class="tree tree-three">♣</div>
-        <div class="tree tree-four">♣</div>
+    <!-- =========================
+         FOREST
+    ========================== -->
 
-    </div>
-
-
-    <div
-        class="forest-bench"
-        onclick="openBench()"
-    >
-
-        <div class="bench-back"></div>
-
-        <div class="bench-seat"></div>
-
-        <div class="bench-leg left"></div>
-        <div class="bench-leg right"></div>
-
-        <span>
-            sit here
-        </span>
-
-    </div>
-    
-    <!-- FOREST MESSAGE -->
-
-    <div
-        id="forest-message"
-        class="forest-message"
-    >
+    <div id="forest-screen">
 
         <button
-            class="forest-message-close"
-            onclick="closeBench()"
+            class="forest-back"
+            onclick="closeForest()"
         >
-            ×
+            ← BACK TO OUR WORLD
         </button>
 
 
-        <p>
-            You've been doing a lot these days.
-            You've been working very, very hard,
-            and you've been trying very, very hard.
-        </p>
+        <!-- FOREST HEADING -->
+
+        <div class="forest-heading">
+
+            <p>
+                THE FOREST
+            </p>
+
+            <h1>
+                Stay here for a while.
+            </h1>
+
+        </div>
 
 
-        <p>
-            I know how hard you've been trying,
-            even when things haven't been easy.
-        </p>
+
+        <!-- TREES -->
+
+        <div class="forest-tree tree-left">
+            ♣
+        </div>
+
+        <div class="forest-tree tree-right">
+            ♣
+        </div>
 
 
-        <p>
-            So just sit here for a while.
-            Take a little break.
-            Look back at the journey and everything
-            you've done to get here.
-        </p>
+
+        <!-- BENCH -->
+
+        <button
+            class="forest-bench"
+            onclick="openBench()"
+        >
+
+            <div class="bench-back"></div>
+
+            <div class="bench-seat"></div>
+
+            <div class="bench-leg bench-left"></div>
+
+            <div class="bench-leg bench-right"></div>
+
+            <span>
+                sit here
+            </span>
+
+        </button>
 
 
-        <p>
-            Think about everything you've been through,
-            everything you've overcome,
-            and everything you've worked so hard for.
-        </p>
+
+        <!-- FIREFLIES -->
+
+        <span class="forest-firefly firefly-one">
+            ✦
+        </span>
+
+        <span class="forest-firefly firefly-two">
+            ✦
+        </span>
+
+        <span class="forest-firefly firefly-three">
+            ✦
+        </span>
+
+        <span class="forest-firefly firefly-four">
+            ✦
+        </span>
 
 
-        <p>
-            And for a moment, just be proud of yourself.
-            Be happy with how far you've come.
-        </p>
+
+        <!-- FOREST MESSAGE -->
+
+        <div id="forest-message">
+
+            <button
+                class="forest-message-close"
+                onclick="closeBench()"
+            >
+                ×
+            </button>
 
 
-        <p class="forest-ending">
-            You deserve to sit here for a while. ♡
-        </p>
+            <p>
+                You've been doing a lot these days.
+                You've been working very, very hard,
+                and you've been trying very, very hard.
+            </p>
+
+
+            <p>
+                I know how hard you've been trying,
+                even when things haven't been easy.
+            </p>
+
+
+            <p>
+                So just sit here for a while.
+                Take a little break.
+                Look back at the journey and everything
+                you've done to get here.
+            </p>
+
+
+            <p>
+                Think about everything you've been through,
+                everything you've overcome,
+                and everything you've worked so hard for.
+            </p>
+
+
+            <p>
+                And for a moment, just be proud of yourself.
+                Be happy with how far you've come.
+            </p>
+
+
+            <p class="forest-ending">
+                You deserve to sit here for a while. ♡
+            </p>
+
+        </div>
 
     </div>
 
-</div>
-      <!-- POPUP -->
+
+
+    <!-- =========================
+         POPUP
+    ========================== -->
 
     <div id="popup">
 
@@ -400,14 +457,26 @@
                 ×
             </button>
 
-            <h2 id="popup-title"></h2>
 
-            <p id="popup-text"></p>
+            <h2 id="popup-title">
+                THE OCEAN
+            </h2>
+
+
+            <p id="popup-text">
+                There are things floating around here
+                that I've never said enough.
+            </p>
 
         </div>
 
     </div>
 
+
+
+    <!-- =========================
+         SCRIPT
+    ========================== -->
 
     <script src="script.js"></script>
 
