@@ -1,0 +1,501 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #050711;
+    color: white;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+#intro {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #17213c 0%,
+            #080b18 45%,
+            #02030a 100%
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+
+    transition:
+        opacity 1.5s ease,
+        visibility 1.5s ease;
+}
+
+#intro.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.intro-content {
+    text-align: center;
+    animation: appear 2s ease;
+}
+
+.small-text {
+    font-size: 14px;
+    letter-spacing: 4px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.intro-content h1 {
+    font-size: clamp(40px, 7vw, 85px);
+    font-weight: normal;
+    letter-spacing: 5px;
+    margin-bottom: 45px;
+}
+
+.intro-content button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+
+    color: white;
+
+    padding: 14px 40px;
+
+    font-family: inherit;
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease;
+}
+
+.intro-content button:hover {
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   WORLD
+========================= */
+
+#world {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #202d50 0%,
+            #11182d 30%,
+            #070b18 65%,
+            #02030a 100%
+        );
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.stars {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 85px 85px;
+
+    opacity: 0.35;
+
+    animation: starsMove 30s linear infinite;
+}
+
+
+/* =========================
+   MOON
+========================= */
+
+.moon {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    top: 9%;
+    right: 12%;
+
+    background: #e8edf5;
+
+    box-shadow:
+        0 0 40px rgba(220,230,255,0.3);
+
+    opacity: 0.85;
+}
+
+
+/* =========================
+   CENTER
+========================= */
+
+.center-light {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: rgba(180,205,255,0.08);
+
+    box-shadow:
+        0 0 40px rgba(160,190,255,0.25),
+        0 0 100px rgba(120,160,255,0.12);
+
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.little-star {
+    font-size: 28px;
+
+    color: #eaf2ff;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 30px #8db5ff;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* =========================
+   PLACES
+========================= */
+
+.world-place {
+    position: absolute;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.world-place:hover {
+    transform: scale(1.12);
+}
+
+.icon {
+    display: block;
+
+    font-size: 45px;
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 0 15px rgba(180,210,255,0.6);
+}
+
+.place-name {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.7;
+}
+
+
+/* POSITIONS */
+
+.home {
+    left: 25%;
+    top: 42%;
+}
+
+.forest {
+    left: 12%;
+    top: 22%;
+}
+
+.ocean {
+    right: 14%;
+    top: 55%;
+}
+
+.observatory {
+    right: 25%;
+    top: 18%;
+}
+
+.future {
+    left: 47%;
+    bottom: 13%;
+
+    opacity: 0.35;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.world-message {
+    position: absolute;
+
+    bottom: 7%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+
+    opacity: 0.45;
+}
+
+
+/* =========================
+   POPUP
+========================= */
+
+#popup {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,0.65);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 200;
+}
+
+.popup-box {
+    position: relative;
+
+    width: min(500px, 85%);
+
+    padding: 50px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151d34,
+            #090d19
+        );
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.6);
+
+    text-align: center;
+
+    animation: popupIn 0.5s ease;
+}
+
+.popup-box h2 {
+    font-weight: normal;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.popup-box p {
+    line-height: 1.8;
+
+    opacity: 0.75;
+}
+
+.close {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    opacity: 0.6;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes pulse {
+
+    0%, 100% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes starsMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-85px);
+    }
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popupIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .moon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon {
+        font-size: 32px;
+    }
+
+    .place-name {
+        font-size: 8px;
+    }
+
+    .forest {
+        left: 7%;
+    }
+
+    .home {
+        left: 18%;
+    }
+
+    .observatory {
+        right: 10%;
+    }
+
+    .ocean {
+        right: 7%;
+    }
+}
