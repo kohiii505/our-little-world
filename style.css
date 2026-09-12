@@ -1,3 +1,4 @@
+```css
 * {
     box-sizing: border-box;
     margin: 0;
@@ -276,7 +277,7 @@ body {
 
 
 /* =========================
-   POSITIONS
+   WORLD POSITIONS
 ========================= */
 
 .home {
@@ -359,7 +360,7 @@ body {
 }
 
 
-/* BACK BUTTON */
+/* HOME BACK BUTTON */
 
 .back-button {
     position: absolute;
@@ -429,7 +430,9 @@ body {
 }
 
 
-/* ENVELOPE */
+/* =========================
+   ENVELOPE
+========================= */
 
 .envelope {
     position: relative;
@@ -640,10 +643,10 @@ body {
 }
 
 
-```css
 .letter-close:hover {
     opacity: 1;
 }
+
 
 /* =========================
    FOREST
@@ -662,23 +665,26 @@ body {
 
     background:
         radial-gradient(
-            circle at 50% 45%,
-            #243c32 0%,
-            #13251f 35%,
-            #07120f 70%,
-            #020706 100%
+            circle at 50% 40%,
+            #263f34 0%,
+            #172b24 30%,
+            #0b1915 65%,
+            #030807 100%
         );
 
     z-index: 200;
 }
 
-/* BACK BUTTON */
+
+/* FOREST BACK BUTTON */
 
 .forest-back {
     position: absolute;
 
-    top: 30px;
-    left: 30px;
+    top: 28px;
+    left: 28px;
+
+    padding: 8px 0;
 
     background: transparent;
     border: none;
@@ -693,98 +699,139 @@ body {
 
     cursor: pointer;
 
-    opacity: 0.65;
+    opacity: 0.75;
 
-    z-index: 20;
+    z-index: 100;
 }
 
 
 .forest-back:hover {
     opacity: 1;
 }
-/* TREES */
+
+
+/* FOREST TITLE */
+
+.forest-title {
+    position: absolute;
+
+    top: 12%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    z-index: 20;
+}
+
+
+.forest-title p {
+    margin-bottom: 15px;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.5;
+}
+
+
+.forest-title h1 {
+    font-size: clamp(28px, 5vw, 50px);
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   FOREST TREES
+========================= */
 
 .forest-trees {
     position: absolute;
     inset: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
 }
 
 
 .tree {
     position: absolute;
 
-    color: #19382d;
+    color: #17362b;
 
     font-size: 180px;
+
+    line-height: 1;
 
     opacity: 0.8;
 
     text-shadow:
-        0 0 30px rgba(80,150,120,0.2);
+        0 0 30px rgba(100,150,120,0.15);
 }
 
 
 .tree-one {
-    left: 3%;
-    bottom: 5%;
+    left: 2%;
+    bottom: 4%;
 }
 
 
 .tree-two {
-    left: 20%;
-    bottom: -5%;
+    left: 18%;
+    bottom: -8%;
 
     font-size: 230px;
 }
 
 
 .tree-three {
-    right: 8%;
+    right: 5%;
     bottom: 0;
 
-    font-size: 210px;
+    font-size: 220px;
 }
 
 
 .tree-four {
-    right: 25%;
-    bottom: -8%;
+    right: 23%;
+    bottom: -10%;
 
     font-size: 250px;
 }
 
 
-/* BENCH */
+/* =========================
+   FOREST BENCH
+========================= */
 
-.forest-back {
+.forest-bench {
     position: absolute;
 
-    top: 25px;
-    left: 25px;
+    left: 50%;
+    bottom: 20%;
 
-    display: block;
+    transform: translateX(-50%);
 
-    background: transparent !important;
-    border: none !important;
-
-    color: white !important;
-
-    font-family: Georgia, serif;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
+    width: 220px;
+    height: 130px;
 
     cursor: pointer;
 
-    opacity: 0.8;
+    z-index: 20;
 
-    z-index: 999;
+    transition:
+        transform 0.4s ease;
 }
 
-.forest-back:hover {
-    opacity: 1;
-}
+
 .forest-bench:hover {
     transform:
         translateX(-50%)
@@ -863,13 +910,15 @@ body {
 
     letter-spacing: 2px;
 
-    opacity: 0.45;
+    opacity: 0.5;
 
     white-space: nowrap;
 }
 
 
-/* FIREFLIES */
+/* =========================
+   FIREFLIES
+========================= */
 
 .firefly {
     position: absolute;
@@ -882,9 +931,13 @@ body {
         0 0 10px #d8e8a8,
         0 0 20px #a8c878;
 
-    animation: fireflyFloat 4s ease-in-out infinite;
+    z-index: 15;
 
-    z-index: 8;
+    animation:
+        fireflyFloat
+        4s
+        ease-in-out
+        infinite;
 }
 
 
@@ -918,7 +971,9 @@ body {
 }
 
 
-/* FOREST MESSAGE */
+/* =========================
+   FOREST MESSAGE
+========================= */
 
 .forest-message {
     display: none;
@@ -952,9 +1007,12 @@ body {
 
     text-align: center;
 
-    z-index: 50;
+    z-index: 500;
 
-    animation: letterOpen 0.5s ease;
+    animation:
+        letterOpen
+        0.5s
+        ease;
 }
 
 
@@ -998,22 +1056,6 @@ body {
 .forest-message-close:hover {
     opacity: 1;
 }
-
-
-@keyframes fireflyFloat {
-
-    0%, 100% {
-        transform: translateY(0);
-        opacity: 0.35;
-    }
-
-    50% {
-        transform: translateY(-12px);
-        opacity: 1;
-    }
-
-}
-
 
 
 /* =========================
@@ -1192,6 +1234,20 @@ body {
 }
 
 
+@keyframes fireflyFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateY(-12px);
+        opacity: 1;
+    }
+}
+
+
 /* =========================
    MOBILE
 ========================= */
@@ -1203,38 +1259,47 @@ body {
         height: 60px;
     }
 
+
     .icon {
         font-size: 32px;
     }
+
 
     .place-name {
         font-size: 8px;
     }
 
+
     .forest {
         left: 7%;
     }
+
 
     .home {
         left: 18%;
     }
 
+
     .observatory {
         right: 10%;
     }
+
 
     .ocean {
         right: 7%;
     }
 
+
     .letter-title {
         font-size: 28px;
     }
+
 
     .envelope {
         width: 220px;
         height: 145px;
     }
+
 
     .envelope-flap {
         border-left-width: 110px;
@@ -1242,7 +1307,28 @@ body {
         border-top-width: 75px;
     }
 
+
     .letter-content {
         padding: 45px 25px;
     }
+
+
+    .forest-bench {
+        transform: translateX(-50%) scale(0.85);
+    }
+
+
+    .forest-bench:hover {
+        transform:
+            translateX(-50%)
+            translateY(-6px)
+            scale(0.85);
+    }
+
+
+    .forest-message {
+        padding: 45px 25px;
+    }
 }
+```
+
