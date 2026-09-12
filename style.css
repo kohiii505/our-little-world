@@ -489,8 +489,17 @@ body {
     }
 
     .ocean {
+              .observatory {
+        right: 10%;
+    }
+
+    .ocean {
         right: 7%;
-    }body::before {
+    }
+}
+
+/* EXTRA STAR LAYER */
+body::before {
     content: "";
     position: fixed;
     inset: 0;
@@ -501,7 +510,9 @@ body {
     background-position: 0 0, 40px 60px;
     opacity: 0.25;
     pointer-events: none;
-}/* HOME ROOM */
+}
+
+/* HOME ROOM */
 
 #home-room {
     display: block;
