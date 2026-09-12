@@ -1,8 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +10,7 @@
 <body>
 
     <!-- INTRO -->
+
     <div id="intro">
         <div class="intro-content">
             <p class="small-text">A little place I made for you.</p>
@@ -25,9 +23,11 @@
 
 
     <!-- MAIN WORLD -->
+
     <main id="world">
 
         <div class="stars"></div>
+
         <div class="moon"></div>
 
         <div class="center-light">
@@ -37,6 +37,7 @@
 
 
         <!-- HOME -->
+
         <button class="world-place home" onclick="openHome()">
             <span class="icon">♡</span>
             <span class="place-name">HOME</span>
@@ -44,6 +45,7 @@
 
 
         <!-- FOREST -->
+
         <button class="world-place forest" onclick="openForest()">
             <span class="icon">♣</span>
             <span class="place-name">THE FOREST</span>
@@ -51,6 +53,7 @@
 
 
         <!-- OCEAN -->
+
         <button class="world-place ocean" onclick="openOcean()">
             <span class="icon">≈</span>
             <span class="place-name">THE OCEAN</span>
@@ -58,6 +61,7 @@
 
 
         <!-- OBSERVATORY -->
+
         <button class="world-place observatory" onclick="openObservatory()">
             <span class="icon">✦</span>
             <span class="place-name">OBSERVATORY</span>
@@ -65,6 +69,7 @@
 
 
         <!-- MYSTERY -->
+
         <button class="world-place future" onclick="openMystery()">
             <span class="icon">◇</span>
             <span class="place-name">?</span>
@@ -81,9 +86,7 @@
     </main>
 
 
-    <!-- =========================
-         HOME
-    ========================= -->
+    <!-- HOME -->
 
     <section id="home-letter" class="screen">
 
@@ -110,7 +113,9 @@
 
             </div>
 
-            <p class="letter-hint">click the envelope</p>
+            <p class="letter-hint">
+                click the envelope
+            </p>
 
         </div>
 
@@ -164,9 +169,7 @@
     </section>
 
 
-    <!-- =========================
-         FOREST
-    ========================= -->
+    <!-- FOREST -->
 
     <section id="forest-screen" class="screen">
 
@@ -175,23 +178,30 @@
         </button>
 
         <div class="forest-heading">
+
             <p>THE FOREST</p>
+
             <h1>Stay here for a while.</h1>
+
         </div>
+
 
         <div class="forest-tree tree-left">♣</div>
         <div class="forest-tree tree-right">♣</div>
+
 
         <button class="forest-bench" onclick="openBench()">
 
             <div class="bench-back"></div>
             <div class="bench-seat"></div>
+
             <div class="bench-leg bench-left"></div>
             <div class="bench-leg bench-right"></div>
 
             <span>SIT HERE</span>
 
         </button>
+
 
         <div class="forest-firefly firefly-one">✦</div>
         <div class="forest-firefly firefly-two">✦</div>
@@ -246,9 +256,7 @@
     </section>
 
 
-    <!-- =========================
-         OCEAN
-    ========================= -->
+    <!-- OCEAN -->
 
     <section id="ocean-screen" class="screen">
 
@@ -256,32 +264,120 @@
             ← BACK TO OUR WORLD
         </button>
 
-        <div class="ocean-content">
 
-            <p class="ocean-label">THE OCEAN</p>
+        <div class="ocean-sky"></div>
 
-            <h1>Come sit with me.</h1>
+        <div class="ocean-moon"></div>
 
-            <p>
-                If the world ever gets too loud,
-                we can just come here for a while.
+
+        <div class="ocean-heading">
+
+            <p>THE OCEAN</p>
+
+            <h1>Take your time.</h1>
+
+            <span>
+                There are little things hidden beneath the waves.
+            </span>
+
+        </div>
+
+
+        <!-- WAVES -->
+
+        <div class="wave wave-one"></div>
+        <div class="wave wave-two"></div>
+        <div class="wave wave-three"></div>
+
+
+        <!-- COLLECTIBLES -->
+
+        <button
+            class="ocean-item shell shell-one"
+            onclick="collectOceanItem(this, 'first')"
+        >
+            🐚
+        </button>
+
+        <button
+            class="ocean-item shell shell-two"
+            onclick="collectOceanItem(this, 'memory')"
+        >
+            🐚
+        </button>
+
+        <button
+            class="ocean-item starfish"
+            onclick="collectOceanItem(this, 'love')"
+        >
+            ✦
+        </button>
+
+        <button
+            class="ocean-item bubble bubble-one"
+            onclick="collectOceanItem(this, 'future')"
+        >
+            ○
+        </button>
+
+        <button
+            class="ocean-item bubble bubble-two"
+            onclick="collectOceanItem(this, 'little')"
+        >
+            ○
+        </button>
+
+
+        <div class="ocean-counter">
+            <span id="ocean-count">0</span> / 5 FOUND
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div id="ocean-message">
+
+            <button
+                class="ocean-message-close"
+                onclick="closeOceanMessage()"
+            >
+                ×
+            </button>
+
+            <p id="ocean-message-label">
+                SOMETHING FROM THE WAVES
             </p>
 
-            <p>
-                No talking. No worrying.
-                Just you, me, and the sound of the water.
-            </p>
+            <h2 id="ocean-message-title"></h2>
 
-            <span class="ocean-heart">♡</span>
+            <p id="ocean-message-text"></p>
+
+        </div>
+
+
+        <!-- FINAL MESSAGE -->
+
+        <div id="ocean-complete">
+
+            <div class="complete-symbol">✦</div>
+
+            <p>YOU FOUND EVERYTHING</p>
+
+            <h2>
+                I think I'd still find you.
+            </h2>
+
+            <span>
+                Even in an ocean this big,
+                somehow I'd still find my way back to you. ♡
+            </span>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         OBSERVATORY
-    ========================= -->
+    <!-- OBSERVATORY -->
 
     <section id="observatory-screen" class="screen">
 
@@ -292,23 +388,60 @@
             ← BACK TO OUR WORLD
         </button>
 
+
         <div class="observatory-stars"></div>
+
 
         <div class="observatory-heading">
 
             <p>THE OBSERVATORY</p>
 
-            <h1>Look a little closer.</h1>
+            <h1>Find your star.</h1>
+
+            <span>
+                Click the stars hiding in the sky.
+            </span>
 
         </div>
 
-        <div class="constellation constellation-one">✦</div>
-        <div class="constellation constellation-two">✧</div>
-        <div class="constellation constellation-three">⋆</div>
+
+        <!-- CLICKABLE STARS -->
+
+        <button
+            class="sky-star sky-star-one"
+            onclick="findStar(this, 'one')"
+        >
+            ✦
+        </button>
+
+        <button
+            class="sky-star sky-star-two"
+            onclick="findStar(this, 'two')"
+        >
+            ✧
+        </button>
+
+        <button
+            class="sky-star sky-star-three"
+            onclick="findStar(this, 'three')"
+        >
+            ⋆
+        </button>
+
+        <button
+            class="sky-star sky-star-four"
+            onclick="findStar(this, 'four')"
+        >
+            ✦
+        </button>
+
+
+        <!-- TELESCOPE -->
 
         <div class="telescope">
 
             <div class="telescope-body"></div>
+
             <div class="telescope-lens"></div>
 
             <div class="telescope-leg left-leg"></div>
@@ -316,61 +449,118 @@
 
         </div>
 
-        <div class="observatory-message">
 
-            <p class="observatory-small">
-                SOMEWHERE IN THE STARS
+        <div class="star-counter">
+            <span id="star-count">0</span> / 4 STARS FOUND
+        </div>
+
+
+        <div id="observatory-message">
+
+            <button
+                class="observatory-message-close"
+                onclick="closeObservatoryMessage()"
+            >
+                ×
+            </button>
+
+            <p id="star-message-small">
+                A LITTLE STAR
             </p>
+
+            <h2 id="star-message-title"></h2>
+
+            <p id="star-message-text"></p>
+
+        </div>
+
+
+        <div id="observatory-complete">
+
+            <div>✦</div>
+
+            <p>YOU FOUND YOUR CONSTELLATION</p>
 
             <h2>
-                I think I'd find you.
+                Out of all the stars,
+                I'd still look for yours.
             </h2>
 
-            <p>
-                No matter how many stars there are,
-                somehow I'd still look for yours.
-            </p>
-
-            <span>✦</span>
+            <span>
+                And somehow, I think I'd always recognize it.
+            </span>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         MYSTERY
-    ========================= -->
+    <!-- MYSTERY -->
 
     <section id="mystery-screen" class="screen">
 
-        <button class="mystery-back" onclick="closeMystery()">
+        <button
+            class="mystery-back"
+            onclick="closeMystery()"
+        >
             ← BACK TO OUR WORLD
         </button>
+
+
+        <div class="mystery-background"></div>
+
 
         <div class="mystery-content">
 
             <div class="mystery-symbol">◇</div>
 
             <p class="mystery-label">
-                SOMETHING IS WAITING HERE
+                THE PLACE WE HAVEN'T REACHED YET
             </p>
 
-            <h1>Not yet.</h1>
+            <h1>Our Future</h1>
 
             <p>
-                There are some places in our little world
-                that we haven't reached yet.
+                Some parts of our little world
+                aren't memories yet.
             </p>
 
             <p>
-                Maybe one day,
-                we'll come back here.
+                They're places we're going to see,
+                things we're going to do,
+                and moments we haven't lived yet.
             </p>
 
-            <div class="mystery-line"></div>
+            <button
+                class="mystery-button"
+                onclick="revealFuture()"
+            >
+                REVEAL ONE
+            </button>
 
-            <span>01 / ∞</span>
+
+            <div id="future-message">
+
+                <span>01 / ∞</span>
+
+                <h2>
+                    Somewhere we've never been.
+                </h2>
+
+                <p>
+                    Maybe a city neither of us knows.
+                    Maybe a tiny café.
+                    Maybe somewhere completely random
+                    that becomes ours just because
+                    we were there together.
+                </p>
+
+                <p class="future-ending">
+                    That's the thing about the future.
+                    We get to make it. ♡
+                </p>
+
+            </div>
 
         </div>
 
@@ -381,4 +571,3 @@
 
 </body>
 </html>
-
