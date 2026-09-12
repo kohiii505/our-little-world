@@ -71,8 +71,12 @@ function closePlace() {
 
     document.getElementById("popup").style.display = "none";
 
-} 
-    function closeHome() {
+}
+
+
+function closeHome() {
+
     document.getElementById("home-room").style.display = "none";
     document.getElementById("world").style.display = "block";
+
 }
