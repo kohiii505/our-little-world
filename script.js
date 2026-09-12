@@ -11,7 +11,6 @@ function openHome() {
 }
 
 function closeHome() {
-    document.getElementById("letter-content").style.display = "none";
     document.getElementById("home-letter").style.display = "none";
     document.getElementById("world").style.display = "block";
 }
