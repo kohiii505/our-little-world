@@ -2065,4 +2065,854 @@ body {
         max-height: 85vh;
         overflow-y: auto;
     }
+    /* =====================================================
+   🌊 OCEAN — NEW DESIGN
+===================================================== */
+
+#ocean-screen {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #1b6078 0%,
+            #0b4057 35%,
+            #052c40 65%,
+            #021823 100%
+        );
+
+    color: #e9f9ff;
+}
+
+.ocean-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,0.7) 1px,
+            transparent 1px
+        );
+
+    background-size: 95px 95px;
+    opacity: 0.25;
+}
+
+.ocean-moon {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    top: 10%;
+    right: 13%;
+
+    border-radius: 50%;
+
+    background: #edfaff;
+
+    box-shadow:
+        0 0 40px rgba(200,240,255,0.45);
+
+    pointer-events: none;
+}
+
+.ocean-title {
+    position: absolute;
+
+    z-index: 30;
+
+    left: 50%;
+    top: 9%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    width: 90%;
+}
+
+.ocean-title p {
+    font-size: 9px;
+    letter-spacing: 5px;
+    opacity: 0.45;
+    margin-bottom: 10px;
+}
+
+.ocean-title h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.ocean-title span {
+    font-size: 13px;
+    opacity: 0.55;
+}
+
+.ocean-water {
+    position: absolute;
+
+    left: -10%;
+    bottom: -80px;
+
+    width: 120%;
+    height: 240px;
+
+    border-radius: 50% 50% 0 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(11,93,115,0.65),
+            rgba(2,32,45,0.95)
+        );
+
+    box-shadow:
+        0 -20px 50px rgba(60,190,220,0.15);
+
+    animation: oceanWave 8s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* OCEAN DISCOVERIES */
+
+.ocean-discovery {
+    position: absolute;
+
+    z-index: 100;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 30px;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 25px rgba(120,220,255,0.9);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.ocean-discovery:hover {
+    transform: scale(1.4);
+}
+
+.discovery-one {
+    left: 17%;
+    top: 34%;
+
+    animation: oceanFloat 5s ease-in-out infinite;
+}
+
+.discovery-two {
+    left: 69%;
+    top: 31%;
+
+    animation: oceanFloat 6s ease-in-out infinite reverse;
+}
+
+.discovery-three {
+    left: 39%;
+    top: 48%;
+
+    animation: oceanFloat 5.5s ease-in-out infinite;
+}
+
+.discovery-four {
+    right: 17%;
+    top: 59%;
+
+    animation: oceanFloat 7s ease-in-out infinite reverse;
+}
+
+.discovery-five {
+    left: 26%;
+    top: 68%;
+
+    animation: oceanFloat 6.5s ease-in-out infinite;
+}
+
+
+/* BUBBLES */
+
+.ocean-bubble {
+    position: absolute;
+
+    color: rgba(210,245,255,0.5);
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    animation: bubbleRise 7s ease-in-out infinite;
+}
+
+.bubble-a {
+    left: 29%;
+    top: 43%;
+}
+
+.bubble-b {
+    left: 58%;
+    top: 52%;
+    animation-delay: 2s;
+}
+
+.bubble-c {
+    right: 27%;
+    top: 44%;
+    animation-delay: 3s;
+}
+
+.bubble-d {
+    left: 48%;
+    top: 67%;
+    animation-delay: 1s;
+}
+
+
+/* COUNTER */
+
+.ocean-counter {
+    position: absolute;
+
+    z-index: 150;
+
+    bottom: 7%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.55;
+}
+
+
+/* OCEAN POPUP */
+
+#ocean-message {
+    display: none;
+
+    position: absolute;
+
+    z-index: 900;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(460px, 84%);
+
+    padding: 45px 40px;
+
+    background: rgba(238,249,252,0.96);
+
+    color: #12394a;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.5);
+
+    animation: popup 0.4s ease;
+}
+
+#ocean-message > p {
+    font-size: 9px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 18px;
+}
+
+#ocean-message h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+#ocean-message span {
+    line-height: 1.8;
+    opacity: 0.7;
+}
+
+.ocean-message-close {
+    position: absolute;
+
+    top: 10px;
+    right: 17px;
+
+    background: none;
+    border: none;
+
+    color: #12394a;
+
+    font-size: 27px;
+
+    cursor: pointer;
+}
+
+
+/* OCEAN COMPLETE */
+
+#ocean-complete {
+    display: none;
+
+    position: absolute;
+
+    z-index: 950;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(520px, 85%);
+
+    padding: 50px;
+
+    background: rgba(238,249,252,0.97);
+
+    color: #12394a;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.55);
+
+    animation: popup 0.5s ease;
+}
+
+.complete-star {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#ocean-complete p {
+    font-size: 9px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 18px;
+}
+
+#ocean-complete h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+#ocean-complete span {
+    line-height: 1.8;
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   🔭 OBSERVATORY — NEW DESIGN
+===================================================== */
+
+#observatory-screen {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #273b70 0%,
+            #111d42 38%,
+            #070b1c 72%,
+            #02030a 100%
+        );
+}
+
+.observatory-sky {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    opacity: 0.3;
+}
+
+
+/* TITLE */
+
+.observatory-title {
+    position: absolute;
+
+    z-index: 50;
+
+    left: 50%;
+    top: 9%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    text-align: center;
+}
+
+.observatory-title p {
+    font-size: 9px;
+    letter-spacing: 5px;
+    opacity: 0.45;
+    margin-bottom: 10px;
+}
+
+.observatory-title h1 {
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.observatory-title span {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+
+/* BACKGROUND STARS */
+
+.tiny-star {
+    position: absolute;
+
+    color: rgba(255,255,255,0.5);
+
+    pointer-events: none;
+
+    font-size: 12px;
+
+    text-shadow:
+        0 0 8px white;
+}
+
+.star-a { left: 8%; top: 24%; }
+.star-b { left: 19%; top: 44%; }
+.star-c { left: 31%; top: 27%; }
+.star-d { left: 43%; top: 20%; }
+.star-e { left: 53%; top: 32%; }
+.star-f { left: 63%; top: 24%; }
+.star-g { left: 76%; top: 19%; }
+.star-h { left: 88%; top: 31%; }
+.star-i { left: 13%; top: 65%; }
+.star-j { left: 22%; top: 73%; }
+.star-k { left: 36%; top: 67%; }
+.star-l { left: 48%; top: 57%; }
+.star-m { left: 61%; top: 71%; }
+.star-n { left: 73%; top: 58%; }
+.star-o { left: 83%; top: 70%; }
+.star-p { left: 92%; top: 53%; }
+
+
+/* SPECIAL STARS */
+
+.hidden-star {
+    position: absolute;
+
+    z-index: 100;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 25px #9abaff;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+
+    animation: starPulse 4s ease-in-out infinite;
+}
+
+.hidden-star:hover {
+    transform: scale(1.5);
+}
+
+.important-one {
+    left: 26%;
+    top: 36%;
+}
+
+.important-two {
+    left: 57%;
+    top: 25%;
+    animation-delay: 1s;
+}
+
+.important-three {
+    left: 74%;
+    top: 48%;
+    animation-delay: 2s;
+}
+
+.important-four {
+    left: 42%;
+    top: 64%;
+    animation-delay: 3s;
+}
+
+
+/* CONSTELLATION */
+
+.constellation-line {
+    position: absolute;
+
+    z-index: 20;
+
+    height: 1px;
+
+    background: rgba(190,215,255,0.35);
+
+    transform-origin: left center;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+
+    pointer-events: none;
+}
+
+.line-one {
+    left: 26.5%;
+    top: 37%;
+
+    width: 33%;
+
+    transform: rotate(-18deg);
+}
+
+.line-two {
+    left: 58%;
+    top: 27%;
+
+    width: 20%;
+
+    transform: rotate(48deg);
+}
+
+.line-three {
+    left: 74%;
+    top: 50%;
+
+    width: 35%;
+
+    transform: rotate(155deg);
+}
+
+
+/* COUNTER */
+
+.observatory-counter {
+    position: absolute;
+
+    z-index: 150;
+
+    bottom: 7%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.5;
+}
+
+
+/* TELESCOPE */
+
+.telescope {
+    position: absolute;
+
+    z-index: 40;
+
+    right: 8%;
+    bottom: 8%;
+
+    width: 120px;
+    height: 130px;
+
+    pointer-events: none;
+
+    opacity: 0.6;
+}
+
+.telescope-body {
+    position: absolute;
+
+    width: 85px;
+    height: 25px;
+
+    top: 25px;
+    left: 15px;
+
+    border-radius: 20px;
+
+    background: #151c38;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    transform: rotate(-20deg);
+}
+
+.telescope-lens {
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    top: 14px;
+    left: 2px;
+
+    border-radius: 50%;
+
+    background: #8ea9d8;
+
+    box-shadow:
+        0 0 15px rgba(130,170,255,0.4);
+}
+
+.telescope-leg {
+    position: absolute;
+
+    width: 3px;
+    height: 80px;
+
+    top: 55px;
+
+    background: rgba(255,255,255,0.2);
+
+    transform-origin: top;
+}
+
+.left-leg {
+    left: 45px;
+    transform: rotate(20deg);
+}
+
+.right-leg {
+    left: 65px;
+    transform: rotate(-20deg);
+}
+
+
+/* OBSERVATORY POPUP */
+
+#observatory-message {
+    display: none;
+
+    position: absolute;
+
+    z-index: 900;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(460px, 84%);
+
+    padding: 45px 40px;
+
+    background: rgba(241,244,250,0.97);
+
+    color: #17213c;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.6);
+
+    animation: popup 0.4s ease;
+}
+
+#observatory-message > p {
+    font-size: 9px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 18px;
+}
+
+#observatory-message h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+#observatory-message span {
+    line-height: 1.8;
+    opacity: 0.7;
+}
+
+.observatory-message-close {
+    position: absolute;
+
+    top: 10px;
+    right: 17px;
+
+    background: none;
+    border: none;
+
+    color: #17213c;
+
+    font-size: 27px;
+
+    cursor: pointer;
+}
+
+
+/* OBSERVATORY COMPLETE */
+
+#observatory-complete {
+    display: none;
+
+    position: absolute;
+
+    z-index: 950;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(530px, 85%);
+
+    padding: 50px;
+
+    background: rgba(241,244,250,0.97);
+
+    color: #17213c;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.6);
+
+    animation: popup 0.5s ease;
+}
+
+.constellation-final {
+    font-size: 38px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px #91b5ff;
+}
+
+#observatory-complete p {
+    font-size: 9px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 18px;
+}
+
+#observatory-complete h2 {
+    font-size: 29px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+#observatory-complete span {
+    line-height: 1.8;
+    opacity: 0.65;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes oceanWave {
+
+    0%, 100% {
+        transform: translateX(-2%);
+    }
+
+    50% {
+        transform: translateX(2%);
+    }
+}
+
+@keyframes oceanFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes bubbleRise {
+
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.25;
+    }
+
+    50% {
+        transform: translateY(-25px);
+        opacity: 0.7;
+    }
+}
+
+@keyframes starPulse {
+
+    0%, 100% {
+        opacity: 0.55;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+}
 }
