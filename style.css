@@ -2915,4 +2915,215 @@ body {
             scale(1);
     }
 }
+} 
+/* =====================================================
+   FINAL FIXES — OCEAN / OBSERVATORY / MYSTERY
+===================================================== */
+
+/* ---------- OCEAN ---------- */
+
+#ocean-screen {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    z-index: 999 !important;
+    background: linear-gradient(
+        180deg,
+        #071827 0%,
+        #0b2638 45%,
+        #123d4c 100%
+    ) !important;
+}
+
+#ocean-screen .ocean-title {
+    position: absolute !important;
+    top: 13% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 80% !important;
+    text-align: center !important;
+    z-index: 20 !important;
+}
+
+#ocean-screen .ocean-title p,
+#ocean-screen .ocean-title h1,
+#ocean-screen .ocean-title span {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+#ocean-screen .ocean-water {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+#ocean-screen .ocean-discovery {
+    position: absolute !important;
+    z-index: 30 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+#ocean-screen .ocean-counter {
+    position: absolute !important;
+    bottom: 7% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 40 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+#ocean-screen #ocean-message,
+#ocean-screen #ocean-complete {
+    position: fixed !important;
+    z-index: 100 !important;
+}
+
+#ocean-screen .ocean-back {
+    position: absolute !important;
+    top: 30px !important;
+    left: 30px !important;
+    z-index: 100 !important;
+}
+
+
+/* ---------- OBSERVATORY ---------- */
+
+#observatory-screen {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    z-index: 999 !important;
+    background: linear-gradient(
+        180deg,
+        #050817 0%,
+        #090d27 55%,
+        #11183d 100%
+    ) !important;
+}
+
+#observatory-screen .observatory-title {
+    position: absolute !important;
+    top: 13% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 80% !important;
+    text-align: center !important;
+    z-index: 20 !important;
+}
+
+#observatory-screen .observatory-title p,
+#observatory-screen .observatory-title h1,
+#observatory-screen .observatory-title span {
+    display: block !important;
+    text-align: center !important;
+}
+
+#observatory-screen .tiny-star {
+    position: absolute !important;
+    z-index: 10 !important;
+}
+
+#observatory-screen .hidden-star {
+    position: absolute !important;
+    z-index: 50 !important;
+    cursor: pointer !important;
+}
+
+#observatory-screen .constellation-line {
+    position: absolute !important;
+    z-index: 15 !important;
+    pointer-events: none !important;
+}
+
+#observatory-screen .observatory-counter {
+    position: absolute !important;
+    bottom: 7% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 40 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+#observatory-screen .telescope {
+    position: absolute !important;
+    z-index: 25 !important;
+}
+
+#observatory-screen #observatory-message,
+#observatory-screen #observatory-complete {
+    position: fixed !important;
+    z-index: 100 !important;
+}
+
+#observatory-screen .observatory-back {
+    position: absolute !important;
+    top: 30px !important;
+    left: 30px !important;
+    z-index: 100 !important;
+}
+
+
+/* ---------- MYSTERY ---------- */
+
+#mystery-screen {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    z-index: 999 !important;
+}
+
+#mystery-screen .mystery-background {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+}
+
+#mystery-screen .mystery-content {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: min(800px, 85vw) !important;
+    text-align: center !important;
+    z-index: 20 !important;
+}
+
+#mystery-screen .mystery-content p,
+#mystery-screen .mystery-content h1,
+#mystery-screen .mystery-content span {
+    display: block !important;
+    text-align: center !important;
+}
+
+#mystery-screen .mystery-button {
+    position: relative !important;
+    z-index: 30 !important;
+    cursor: pointer !important;
+}
+
+#mystery-screen .mystery-back {
+    position: absolute !important;
+    top: 30px !important;
+    left: 30px !important;
+    z-index: 100 !important;
+}
+
+#mystery-screen #future-message {
+    position: relative !important;
+    z-index: 30 !important;
 }
