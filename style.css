@@ -669,7 +669,6 @@ body {
     z-index: 200;
 }
 
-
 /* BACK BUTTON */
 
 .forest-back {
@@ -700,46 +699,6 @@ body {
 .forest-back:hover {
     opacity: 1;
 }
-
-
-/* TITLE */
-
-.forest-title {
-    position: absolute;
-
-    top: 12%;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    text-align: center;
-
-    z-index: 10;
-
-    width: 90%;
-}
-
-
-.forest-title p {
-    font-size: 10px;
-
-    letter-spacing: 5px;
-
-    opacity: 0.5;
-
-    margin-bottom: 15px;
-}
-
-
-.forest-title h1 {
-    font-size: clamp(28px, 5vw, 50px);
-
-    font-weight: normal;
-
-    letter-spacing: 2px;
-}
-
-
 /* TREES */
 
 .forest-trees {
@@ -794,26 +753,35 @@ body {
 
 /* BENCH */
 
-.forest-bench {
+.forest-back {
     position: absolute;
 
-    left: 50%;
-    bottom: 20%;
+    top: 25px;
+    left: 25px;
 
-    transform: translateX(-50%);
+    display: block;
 
-    width: 220px;
-    height: 130px;
+    background: transparent !important;
+    border: none !important;
+
+    color: white !important;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
 
     cursor: pointer;
 
-    z-index: 10;
+    opacity: 0.8;
 
-    transition:
-        transform 0.4s ease;
+    z-index: 999;
 }
 
-
+.forest-back:hover {
+    opacity: 1;
+}
 .forest-bench:hover {
     transform:
         translateX(-50%)
