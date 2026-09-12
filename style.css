@@ -103,7 +103,8 @@ body {
     width: 100vw;
     height: 100vh;
 
-    overflow: hidden;
+    overflow: hidden; 
+    z-index: 1;
 
     background:
         radial-gradient(
