@@ -10,12 +10,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-    <!-- =========================
-         INTRO SCREEN
-    ========================== -->
+    <!-- INTRO -->
 
     <div id="intro">
 
@@ -38,21 +35,17 @@
     </div>
 
 
-    <!-- =========================
-         THE WORLD
-    ========================== -->
+    <!-- WORLD -->
 
     <main id="world">
 
-        <!-- STARS -->
         <div class="stars"></div>
 
-
-        <!-- MOON -->
         <div class="moon"></div>
 
 
-        <!-- CENTRAL LIGHT -->
+        <!-- CENTRAL STAR -->
+
         <div class="center-light">
 
             <div class="glow"></div>
@@ -65,13 +58,14 @@
 
 
         <!-- HOME -->
+
         <button
             class="world-place home"
             onclick="openPlace('home')"
         >
 
             <span class="icon">
-                ⌂
+                ♡
             </span>
 
             <span class="place-name">
@@ -82,6 +76,7 @@
 
 
         <!-- FOREST -->
+
         <button
             class="world-place forest"
             onclick="openPlace('forest')"
@@ -99,6 +94,7 @@
 
 
         <!-- OCEAN -->
+
         <button
             class="world-place ocean"
             onclick="openPlace('ocean')"
@@ -116,6 +112,7 @@
 
 
         <!-- OBSERVATORY -->
+
         <button
             class="world-place observatory"
             onclick="openPlace('observatory')"
@@ -133,6 +130,7 @@
 
 
         <!-- FUTURE -->
+
         <button
             class="world-place future"
             onclick="openPlace('future')"
@@ -149,7 +147,8 @@
         </button>
 
 
-        <!-- LITTLE MESSAGE -->
+        <!-- MESSAGE -->
+
         <div class="world-message">
 
             <p>
@@ -162,56 +161,110 @@
     </main>
 
 
-    <!-- =========================
-         HOME ROOM
-    ========================== -->
+    <!-- HOME / LETTER -->
 
-    <div id="home-room">
+    <div id="home-letter">
 
-        <!-- BACK BUTTON -->
         <button
             class="back-button"
             onclick="closeHome()"
         >
-            ← BACK
+            ← BACK TO OUR WORLD
         </button>
 
 
-        <!-- WINDOW -->
-        <div class="room-window">
+        <div class="letter-area">
 
-            <div class="window-sky"></div>
+            <p class="letter-label">
+                HOME
+            </p>
+
+            <h1 class="letter-title">
+                A little letter for you.
+            </h1>
+
+
+            <div
+                class="envelope"
+                onclick="openLetter()"
+            >
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-body">
+
+                    <span>
+                        ♡
+                    </span>
+
+                    <p>
+                        OPEN ME
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p class="letter-hint">
+                click the envelope
+            </p>
 
         </div>
 
 
-        <!-- BED -->
-        <div class="room-bed">
+        <!-- OPEN LETTER -->
 
-            <div class="pillow"></div>
+        <div
+            id="letter-content"
+            class="letter-content"
+        >
 
-            <div class="blanket"></div>
-
-        </div>
-
-
-        <!-- LAMP -->
-        <div class="room-lamp">
-            ✦
-        </div>
+            <button
+                class="letter-close"
+                onclick="closeLetter()"
+            >
+                ×
+            </button>
 
 
-        <!-- BOOKS -->
-        <div class="room-books">
-            📚
+            <p class="letter-small">
+                TO YOU,
+            </p>
+
+
+            <h2>
+                If I could put everything I feel
+                into one place...
+            </h2>
+
+
+            <p>
+                I don't think I could fit everything
+                I feel for you into one little world.
+            </p>
+
+            <p>
+                So I made one instead.
+            </p>
+
+            <p>
+                Every little place here exists because
+                of something that reminds me of you,
+                something we've shared, or something
+                I hope we get to experience together.
+            </p>
+
+            <p class="letter-ending">
+                Welcome home. ♡
+            </p>
+
         </div>
 
     </div>
 
 
-    <!-- =========================
-         POPUP
-    ========================== -->
+    <!-- POPUP -->
 
     <div id="popup">
 
@@ -233,7 +286,6 @@
     </div>
 
 
-    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
