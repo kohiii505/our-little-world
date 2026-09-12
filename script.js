@@ -155,3 +155,19 @@ function closeOcean() {
     document.getElementById("world").style.display = "block";
 
 }
+function openOcean() {
+
+    document.getElementById("world").style.display = "none";
+
+    document.getElementById("ocean-screen").style.display = "block";
+
+}
+
+
+function closeOcean() {
+
+    document.getElementById("ocean-screen").style.display = "none";
+
+    document.getElementById("world").style.display = "block";
+
+}
