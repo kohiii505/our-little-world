@@ -11,11 +11,14 @@ function openPlace(place) {
 
     const world = document.getElementById("world");
     const homeLetter = document.getElementById("home-letter");
+    const forest = document.getElementById("forest-screen");
 
     const popup = document.getElementById("popup");
     const title = document.getElementById("popup-title");
     const text = document.getElementById("popup-text");
 
+
+    /* HOME */
 
     if (place === "home") {
 
@@ -23,18 +26,23 @@ function openPlace(place) {
         homeLetter.style.display = "block";
 
         return;
+
     }
 
+
+    /* FOREST */
 
     if (place === "forest") {
 
-        title.textContent = "THE FOREST";
+        world.style.display = "none";
+        forest.style.display = "block";
 
-        text.textContent =
-            "Somewhere in here are memories I never want to forget.";
+        return;
 
     }
 
+
+    /* OCEAN */
 
     if (place === "ocean") {
 
@@ -46,6 +54,8 @@ function openPlace(place) {
     }
 
 
+    /* OBSERVATORY */
+
     if (place === "observatory") {
 
         title.textContent = "OBSERVATORY";
@@ -55,6 +65,8 @@ function openPlace(place) {
 
     }
 
+
+    /* MYSTERY */
 
     if (place === "future") {
 
@@ -97,5 +109,30 @@ function openLetter() {
 function closeLetter() {
 
     document.getElementById("letter-content").style.display = "none";
+
+}
+
+
+/* FOREST */
+
+function closeForest() {
+
+    document.getElementById("forest-screen").style.display = "none";
+
+    document.getElementById("world").style.display = "block";
+
+}
+
+
+function openBench() {
+
+    document.getElementById("forest-message").style.display = "block";
+
+}
+
+
+function closeBench() {
+
+    document.getElementById("forest-message").style.display = "none";
 
 }
