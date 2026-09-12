@@ -1,8 +1,6 @@
 function enterWorld() {
 
-    const intro = document.getElementById("intro");
-
-    intro.classList.add("hidden");
+    document.getElementById("intro").classList.add("hidden");
 
 }
 
@@ -10,11 +8,15 @@ function enterWorld() {
 function openPlace(place) {
 
     const world = document.getElementById("world");
+
     const homeLetter = document.getElementById("home-letter");
+
     const forest = document.getElementById("forest-screen");
 
     const popup = document.getElementById("popup");
+
     const title = document.getElementById("popup-title");
+
     const text = document.getElementById("popup-text");
 
 
@@ -23,10 +25,10 @@ function openPlace(place) {
     if (place === "home") {
 
         world.style.display = "none";
+
         homeLetter.style.display = "block";
 
         return;
-
     }
 
 
@@ -35,10 +37,10 @@ function openPlace(place) {
     if (place === "forest") {
 
         world.style.display = "none";
+
         forest.style.display = "block";
 
         return;
-
     }
 
 
@@ -66,7 +68,7 @@ function openPlace(place) {
     }
 
 
-    /* MYSTERY */
+    /* FUTURE */
 
     if (place === "future") {
 
@@ -113,7 +115,9 @@ function closeLetter() {
 }
 
 
-/* FOREST */
+/* =========================
+   FOREST
+========================= */
 
 function closeForest() {
 
