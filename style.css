@@ -497,5 +497,16 @@ body {
 
     .ocean {
         right: 7%;
-    }
+    }body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 80px 80px, 130px 130px;
+    background-position: 0 0, 40px 60px;
+    opacity: 0.25;
+    pointer-events: none;
+}
 }
