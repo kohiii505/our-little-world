@@ -218,7 +218,8 @@ body {
         0 0 10px white,
         0 0 30px #8db5ff;
 
-    animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite; 
+    transform: scale(1);
 }
 
 
