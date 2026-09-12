@@ -79,4 +79,7 @@ function closeHome() {
     document.getElementById("home-room").style.display = "none";
     document.getElementById("world").style.display = "block";
 
+} 
+.hidden {
+    display: none !important;
 }
