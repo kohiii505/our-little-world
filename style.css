@@ -17,10 +17,17 @@ body {
     color: white;
 }
 
+.screen {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
-/* =========================
-   INTRO
-========================= */
+
+/* INTRO */
 
 #intro {
     position: fixed;
@@ -72,16 +79,11 @@ body {
 .intro-content button {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.5);
-
     color: white;
-
     padding: 14px 40px;
-
     font-family: inherit;
     letter-spacing: 4px;
-
     cursor: pointer;
-
     transition:
         background 0.4s ease,
         transform 0.4s ease;
@@ -93,16 +95,12 @@ body {
 }
 
 
-/* =========================
-   WORLD
-========================= */
+/* WORLD */
 
 #world {
     position: relative;
-
     width: 100vw;
     height: 100vh;
-
     overflow: hidden;
 
     background:
@@ -115,9 +113,6 @@ body {
         );
 }
 
-
-/* STARS */
-
 .stars {
     position: absolute;
     inset: 0;
@@ -129,14 +124,10 @@ body {
         );
 
     background-size: 85px 85px;
-
     opacity: 0.35;
 
     animation: starsMove 30s linear infinite;
 }
-
-
-/* MOON */
 
 .moon {
     position: absolute;
@@ -156,9 +147,6 @@ body {
 
     opacity: 0.85;
 }
-
-
-/* CENTER STAR */
 
 .center-light {
     position: absolute;
@@ -236,7 +224,6 @@ body {
     display: block;
 
     font-size: 45px;
-
     margin-bottom: 8px;
 
     text-shadow:
@@ -247,14 +234,9 @@ body {
     display: block;
 
     font-size: 11px;
-
     letter-spacing: 3px;
-
     opacity: 0.7;
 }
-
-
-/* WORLD POSITIONS */
 
 .home {
     left: 25%;
@@ -279,7 +261,6 @@ body {
 .future {
     left: 47%;
     bottom: 13%;
-
     opacity: 0.35;
 }
 
@@ -294,26 +275,55 @@ body {
     text-align: center;
 
     font-size: 14px;
-
     line-height: 1.8;
-
     letter-spacing: 1px;
 
     opacity: 0.45;
 }
 
 
-/* =========================
-   HOME
-========================= */
+/* BACK BUTTONS */
+
+.back-button,
+.forest-back,
+.ocean-back,
+.observatory-back,
+.mystery-back {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-family: Georgia, serif;
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    z-index: 50;
+}
+
+.back-button:hover,
+.forest-back:hover,
+.ocean-back:hover,
+.observatory-back:hover,
+.mystery-back:hover {
+    opacity: 1;
+}
+
+
+/* HOME */
 
 #home-letter {
-    display: none;
-
-    position: fixed;
-    inset: 0;
-
-    overflow: hidden;
+    z-index: 150;
 
     background:
         radial-gradient(
@@ -322,36 +332,6 @@ body {
             #111a32 40%,
             #070b17 100%
         );
-
-    z-index: 150;
-}
-
-.back-button {
-    position: absolute;
-
-    top: 30px;
-    left: 30px;
-
-    background: transparent;
-    border: none;
-
-    color: white;
-
-    font-family: Georgia, serif;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-    opacity: 0.65;
-
-    z-index: 20;
-}
-
-.back-button:hover {
-    opacity: 1;
 }
 
 .letter-area {
@@ -363,17 +343,13 @@ body {
     transform: translate(-50%, -50%);
 
     text-align: center;
-
     width: 90%;
 }
 
 .letter-label {
     font-size: 11px;
-
     letter-spacing: 5px;
-
     opacity: 0.5;
-
     margin-bottom: 15px;
 }
 
@@ -383,12 +359,8 @@ body {
     font-size: clamp(28px, 5vw, 48px);
 
     letter-spacing: 2px;
-
     margin-bottom: 45px;
 }
-
-
-/* ENVELOPE */
 
 .envelope {
     position: relative;
@@ -400,8 +372,7 @@ body {
 
     cursor: pointer;
 
-    transition:
-        transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .envelope:hover {
@@ -412,7 +383,6 @@ body {
 
 .envelope-body {
     position: absolute;
-
     inset: 0;
 
     background:
@@ -437,7 +407,6 @@ body {
     transform: translate(-50%, -50%);
 
     color: #26365c;
-
     font-size: 28px;
 }
 
@@ -452,7 +421,6 @@ body {
     color: #26365c;
 
     font-size: 10px;
-
     letter-spacing: 3px;
 
     white-space: nowrap;
@@ -472,25 +440,15 @@ body {
     border-top: 90px solid #c5d1e5;
 
     z-index: 3;
-
-    filter:
-        drop-shadow(
-            0 3px 3px rgba(0,0,0,0.12)
-        );
 }
 
 .letter-hint {
     margin-top: 25px;
 
     font-size: 11px;
-
     letter-spacing: 2px;
-
     opacity: 0.4;
 }
-
-
-/* LETTER */
 
 .letter-content {
     display: none;
@@ -503,7 +461,6 @@ body {
     transform: translate(-50%, -50%);
 
     width: min(600px, 88%);
-
     max-height: 80vh;
 
     overflow-y: auto;
@@ -522,44 +479,33 @@ body {
     box-shadow:
         0 30px 100px rgba(0,0,0,0.6);
 
-    animation: letterOpen 0.6s ease;
-
     text-align: center;
 
-    z-index: 30;
+    z-index: 60;
 }
 
 .letter-content h2 {
     font-weight: normal;
-
     font-size: 27px;
-
     line-height: 1.4;
-
     margin-bottom: 30px;
 }
 
 .letter-content p {
     line-height: 1.9;
-
     margin-bottom: 20px;
-
     opacity: 0.8;
 }
 
 .letter-small {
     font-size: 10px;
-
     letter-spacing: 4px;
-
     opacity: 0.5 !important;
 }
 
 .letter-ending {
     margin-top: 35px;
-
     font-size: 18px;
-
     opacity: 1 !important;
 }
 
@@ -575,31 +521,16 @@ body {
     color: #17213c;
 
     font-size: 28px;
-
     cursor: pointer;
 
     opacity: 0.5;
 }
 
-.letter-close:hover {
-    opacity: 1;
-}
 
-
-/* =========================
-   FOREST
-========================= */
+/* FOREST */
 
 #forest-screen {
-    display: none;
-
-    position: fixed;
-    inset: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    overflow: hidden;
+    z-index: 200;
 
     background:
         radial-gradient(
@@ -609,43 +540,7 @@ body {
             #0c1914 65%,
             #030706 100%
         );
-
-    z-index: 200;
 }
-
-
-/* FOREST BACK */
-
-.forest-back {
-    position: absolute;
-
-    top: 28px;
-    left: 30px;
-
-    background: none;
-    border: none;
-
-    color: white;
-
-    font-family: Georgia, serif;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-    opacity: 0.7;
-
-    z-index: 100;
-}
-
-.forest-back:hover {
-    opacity: 1;
-}
-
-
-/* FOREST HEADING */
 
 .forest-heading {
     position: absolute;
@@ -658,47 +553,29 @@ body {
     width: 90%;
 
     text-align: center;
-
-    color: white;
-
-    z-index: 20;
 }
 
 .forest-heading p {
     font-size: 10px;
-
     letter-spacing: 5px;
-
     opacity: 0.5;
-
     margin-bottom: 14px;
 }
 
 .forest-heading h1 {
     font-size: clamp(28px, 5vw, 50px);
-
     font-weight: normal;
-
-    letter-spacing: 2px;
 }
-
-
-/* TREES */
 
 .forest-tree {
     position: absolute;
 
     color: #142e24;
-
     font-size: 260px;
-
     line-height: 1;
 
     opacity: 0.9;
-
     pointer-events: none;
-
-    z-index: 5;
 }
 
 .tree-left {
@@ -709,12 +586,8 @@ body {
 .tree-right {
     right: -30px;
     bottom: -55px;
-
     font-size: 290px;
 }
-
-
-/* BENCH */
 
 .forest-bench {
     position: absolute;
@@ -733,11 +606,6 @@ body {
     border: none;
 
     cursor: pointer;
-
-    z-index: 30;
-
-    transition:
-        transform 0.4s ease;
 }
 
 .forest-bench:hover {
@@ -745,9 +613,6 @@ body {
         translateX(-50%)
         translateY(-7px);
 }
-
-
-/* BENCH BACK */
 
 .bench-back {
     position: absolute;
@@ -759,14 +624,10 @@ body {
     height: 65px;
 
     border: 7px solid #59402d;
-
     border-bottom: none;
 
     border-radius: 10px 10px 0 0;
 }
-
-
-/* BENCH SEAT */
 
 .bench-seat {
     position: absolute;
@@ -785,9 +646,6 @@ body {
         0 10px 25px rgba(0,0,0,0.5);
 }
 
-
-/* BENCH LEGS */
-
 .bench-leg {
     position: absolute;
 
@@ -797,8 +655,6 @@ body {
     height: 48px;
 
     background: #463020;
-
-    border-radius: 2px;
 }
 
 .bench-left {
@@ -819,38 +675,23 @@ body {
 
     color: white;
 
-    font-family: Georgia, serif;
-
     font-size: 9px;
-
     letter-spacing: 2px;
 
     opacity: 0.55;
-
-    white-space: nowrap;
 }
-
-
-/* FIREFLIES */
 
 .forest-firefly {
     position: absolute;
 
     color: #dbeaa8;
-
     font-size: 13px;
 
     text-shadow:
         0 0 8px #dbeaa8,
         0 0 20px #a8c878;
 
-    z-index: 15;
-
-    animation:
-        forestFloat
-        4s
-        ease-in-out
-        infinite;
+    animation: forestFloat 4s ease-in-out infinite;
 }
 
 .firefly-one {
@@ -861,26 +702,20 @@ body {
 .firefly-two {
     left: 72%;
     top: 40%;
-
     animation-delay: 1s;
 }
 
 .firefly-three {
     left: 35%;
     top: 58%;
-
     animation-delay: 2s;
 }
 
 .firefly-four {
     right: 23%;
     top: 30%;
-
     animation-delay: 3s;
 }
-
-
-/* FOREST MESSAGE */
 
 #forest-message {
     display: none;
@@ -893,7 +728,6 @@ body {
     transform: translate(-50%, -50%);
 
     width: min(560px, 88%);
-
     max-height: 75vh;
 
     overflow-y: auto;
@@ -914,27 +748,18 @@ body {
     box-shadow:
         0 30px 100px rgba(0,0,0,0.65);
 
-    z-index: 500;
-
-    animation:
-        forestMessageOpen
-        0.5s
-        ease;
+    z-index: 60;
 }
 
 #forest-message p {
     line-height: 1.8;
-
     margin-bottom: 20px;
-
     opacity: 0.82;
 }
 
 #forest-message .forest-ending {
     margin-top: 30px;
-
     font-size: 17px;
-
     opacity: 1;
 }
 
@@ -950,105 +775,349 @@ body {
     color: #183027;
 
     font-size: 28px;
-
     cursor: pointer;
 
     opacity: 0.5;
 }
 
-.forest-message-close:hover {
-    opacity: 1;
-}
 
+/* OCEAN */
 
-/* =========================
-   POPUP
-========================= */
-
-#popup {
-    position: fixed;
-    inset: 0;
-
-    display: none;
-
-    justify-content: center;
-    align-items: center;
-
-    background: rgba(0,0,0,0.65);
-
-    backdrop-filter: blur(8px);
-
+#ocean-screen {
     z-index: 300;
-}
-
-.popup-box {
-    position: relative;
-
-    width: min(500px, 85%);
-
-    padding: 50px;
 
     background:
+        radial-gradient(
+            ellipse at 50% 20%,
+            rgba(90,190,220,0.35),
+            transparent 45%
+        ),
         linear-gradient(
-            145deg,
-            #151d34,
-            #090d19
+            to bottom,
+            #0b3d52,
+            #07516a,
+            #063b50,
+            #021923
         );
 
-    border:
-        1px solid rgba(255,255,255,0.15);
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,0.6);
+    color: #e6f5f7;
 
     text-align: center;
-
-    animation: popupIn 0.5s ease;
 }
 
-.popup-box h2 {
-    font-weight: normal;
+.ocean-content {
+    position: absolute;
 
-    letter-spacing: 4px;
+    top: 50%;
+    left: 50%;
 
+    transform: translate(-50%, -50%);
+
+    width: min(500px, 80%);
+}
+
+.ocean-label {
+    font-size: 12px;
+    letter-spacing: 5px;
+    opacity: 0.65;
     margin-bottom: 25px;
 }
 
-.popup-box p {
-    line-height: 1.8;
-
-    opacity: 0.75;
+.ocean-content h1 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 30px;
 }
 
-.close {
+.ocean-content p:not(.ocean-label) {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin: 18px 0;
+}
+
+.ocean-heart {
+    display: block;
+    margin-top: 35px;
+    font-size: 28px;
+}
+
+
+/* OBSERVATORY */
+
+#observatory-screen {
+    z-index: 300;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #263762 0%,
+            #101a38 35%,
+            #060a18 70%,
+            #02030a 100%
+        );
+}
+
+.observatory-stars {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    opacity: 0.4;
+}
+
+.observatory-heading {
     position: absolute;
 
-    top: 15px;
-    right: 20px;
+    top: 11%;
+    left: 50%;
 
-    background: none;
-    border: none;
+    transform: translateX(-50%);
 
-    color: white;
+    width: 90%;
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+.observatory-heading p {
+    font-size: 10px;
+    letter-spacing: 5px;
+    opacity: 0.5;
+    margin-bottom: 15px;
+}
+
+.observatory-heading h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: normal;
+}
+
+.constellation {
+    position: absolute;
 
     font-size: 28px;
 
-    cursor: pointer;
+    text-shadow:
+        0 0 12px white,
+        0 0 30px #91b5ff;
 
+    animation: constellationFloat 5s ease-in-out infinite;
+}
+
+.constellation-one {
+    left: 18%;
+    top: 30%;
+}
+
+.constellation-two {
+    right: 20%;
+    top: 32%;
+    animation-delay: 1.5s;
+}
+
+.constellation-three {
+    left: 28%;
+    top: 63%;
+    animation-delay: 3s;
+}
+
+.telescope {
+    position: absolute;
+
+    left: 50%;
+    bottom: 18%;
+
+    width: 210px;
+    height: 170px;
+
+    transform: translateX(-50%);
+}
+
+.telescope-body {
+    position: absolute;
+
+    left: 45px;
+    top: 15px;
+
+    width: 125px;
+    height: 45px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #69799c,
+            #aab7d0,
+            #566785
+        );
+
+    transform: rotate(-12deg);
+}
+
+.telescope-lens {
+    position: absolute;
+
+    left: 27px;
+    top: 3px;
+
+    width: 35px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #d8e8ff;
+
+    box-shadow:
+        0 0 20px rgba(180,220,255,0.6);
+}
+
+.telescope-leg {
+    position: absolute;
+
+    top: 75px;
+
+    width: 8px;
+    height: 90px;
+
+    background: #555e70;
+
+    transform-origin: top;
+}
+
+.left-leg {
+    left: 90px;
+    transform: rotate(15deg);
+}
+
+.right-leg {
+    left: 112px;
+    transform: rotate(-15deg);
+}
+
+.observatory-message {
+    position: absolute;
+
+    left: 50%;
+    bottom: 7%;
+
+    transform: translateX(-50%);
+
+    width: min(520px, 85%);
+
+    text-align: center;
+
+    z-index: 15;
+}
+
+.observatory-small {
+    font-size: 9px;
+    letter-spacing: 4px;
+    opacity: 0.45;
+    margin-bottom: 15px;
+}
+
+.observatory-message h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.observatory-message > p:not(.observatory-small) {
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.7;
+}
+
+.observatory-message span {
+    display: block;
+    margin-top: 18px;
+}
+
+
+/* MYSTERY */
+
+#mystery-screen {
+    z-index: 400;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #202035 0%,
+            #0e0d1c 45%,
+            #03030a 100%
+        );
+}
+
+.mystery-content {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(550px, 85%);
+
+    text-align: center;
+}
+
+.mystery-symbol {
+    font-size: 55px;
     opacity: 0.6;
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 0 20px rgba(190,180,255,0.5);
 }
 
-.close:hover {
-    opacity: 1;
+.mystery-label {
+    font-size: 9px;
+    letter-spacing: 5px;
+    opacity: 0.4;
+    margin-bottom: 20px;
+}
+
+.mystery-content h1 {
+    font-size: 52px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.mystery-content p:not(.mystery-label) {
+    font-size: 15px;
+    line-height: 1.9;
+    opacity: 0.65;
+    margin-bottom: 15px;
+}
+
+.mystery-line {
+    width: 80px;
+    height: 1px;
+
+    background: rgba(255,255,255,0.3);
+
+    margin: 30px auto 20px;
+}
+
+.mystery-content span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.35;
 }
 
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* ANIMATIONS */
 
 @keyframes pulse {
-
     0%, 100% {
         transform: scale(0.9);
         opacity: 0.5;
@@ -1061,7 +1130,6 @@ body {
 }
 
 @keyframes float {
-
     0%, 100% {
         transform: translateY(0);
     }
@@ -1072,7 +1140,6 @@ body {
 }
 
 @keyframes starsMove {
-
     from {
         transform: translateY(0);
     }
@@ -1083,7 +1150,6 @@ body {
 }
 
 @keyframes appear {
-
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -1095,38 +1161,7 @@ body {
     }
 }
 
-@keyframes popupIn {
-
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes letterOpen {
-
-    from {
-        opacity: 0;
-        transform:
-            translate(-50%, -50%)
-            scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            translate(-50%, -50%)
-            scale(1);
-    }
-}
-
 @keyframes forestFloat {
-
     0%, 100% {
         transform: translateY(0);
         opacity: 0.35;
@@ -1138,29 +1173,20 @@ body {
     }
 }
 
-@keyframes forestMessageOpen {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translate(-50%, -50%)
-            scale(0.9);
+@keyframes constellationFloat {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.45;
     }
 
-    to {
+    50% {
+        transform: translateY(-12px);
         opacity: 1;
-
-        transform:
-            translate(-50%, -50%)
-            scale(1);
     }
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -1228,244 +1254,12 @@ body {
     #forest-message {
         padding: 45px 25px;
     }
-}/* =========================
-   OCEAN
-========================= */
 
-#ocean-screen {
+    .ocean-content h1 {
+        font-size: 32px;
+    }
 
-    display: none !important;
-
-    position: fixed;
-    inset: 0;
-
-    z-index: 200;
-
-    background:
-    radial-gradient(
-        ellipse at 50% 20%,
-        rgba(90, 190, 220, 0.35),
-        transparent 45%
-    ),
-    linear-gradient(
-        to bottom,
-        #0b3d52,
-        #07516a,
-        #063b50,
-        #021923
-    );
-    color: #e6f5f7;
-
-    text-align: center;
-
-    overflow: hidden;
-}
-
-
-.ocean-back {
-
-    position: absolute;
-
-    top: 30px;
-    left: 30px;
-
-    background: none;
-    border: none;
-
-    color: #9bbbc8;
-
-    font-family: inherit;
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-}
-
-
-.ocean-content {
-
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: min(500px, 80%);
-
-}
-
-
-.ocean-label {
-
-    font-size: 12px;
-
-    letter-spacing: 5px;
-
-    opacity: 0.6;
-
-    margin-bottom: 25px;
-
-}
-
-
-.ocean-content h1 {
-
-    font-family: Georgia, serif;
-
-    font-size: 42px;
-
-    font-weight: normal;
-
-    margin-bottom: 30px;
-
-}
-
-
-.ocean-content p:not(.ocean-label) {
-
-    font-size: 16px;
-
-    line-height: 1.8;
-
-    opacity: 0.8;
-
-    margin: 18px 0;
-
-}
-
-
-.ocean-heart {
-
-    display: block;
-
-    margin-top: 35px;
-
-    font-size: 28px;
-
-    opacity: 0.8;
-
-}
-/* =========================
-   OCEAN
-========================= */
-
-#ocean-screen {
-
-    display: none !important;
-
-    position: fixed;
-    inset: 0;
-
-    z-index: 300;
-
-    background:
-        radial-gradient(
-            ellipse at 50% 20%,
-            rgba(90, 190, 220, 0.35),
-            transparent 45%
-        ),
-        linear-gradient(
-            to bottom,
-            #0b3d52,
-            #07516a,
-            #063b50,
-            #021923
-        );
-
-    color: #e6f5f7;
-
-    text-align: center;
-
-    overflow: hidden;
-}
-
-
-.ocean-back {
-
-    position: absolute;
-
-    top: 30px;
-    left: 30px;
-
-    background: none;
-    border: none;
-
-    color: #c0dce4;
-
-    font-family: inherit;
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-}
-
-
-.ocean-content {
-
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: min(500px, 80%);
-
-}
-
-
-.ocean-label {
-
-    font-size: 12px;
-
-    letter-spacing: 5px;
-
-    opacity: 0.65;
-
-    margin-bottom: 25px;
-
-}
-
-
-.ocean-content h1 {
-
-    font-family: Georgia, serif;
-
-    font-size: 42px;
-
-    font-weight: normal;
-
-    margin-bottom: 30px;
-
-}
-
-
-.ocean-content p:not(.ocean-label) {
-
-    font-size: 16px;
-
-    line-height: 1.8;
-
-    opacity: 0.85;
-
-    margin: 18px 0;
-
-}
-
-
-.ocean-heart {
-
-    display: block;
-
-    margin-top: 35px;
-
-    font-size: 28px;
-
-    opacity: 0.9;
-
+    .mystery-content h1 {
+        font-size: 40px;
+    }
 }
