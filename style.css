@@ -1234,7 +1234,8 @@ body {
 
 #ocean-screen {
 
-    display: none;
+    isplay: none !important;
+
 
     position: fixed;
     inset: 0;
