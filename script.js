@@ -80,6 +80,3 @@ function closeHome() {
     document.getElementById("world").style.display = "block";
 
 } 
-.hidden {
-    display: none !important;
-}
