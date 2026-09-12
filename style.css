@@ -642,7 +642,407 @@ body {
 
 .letter-close:hover {
     opacity: 1;
+/* =========================
+   FOREST
+========================= */
+
+#forest-screen {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #243c32 0%,
+            #13251f 35%,
+            #07120f 70%,
+            #020706 100%
+        );
+
+    z-index: 200;
 }
+
+
+/* BACK BUTTON */
+
+.forest-back {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    opacity: 0.65;
+
+    z-index: 20;
+}
+
+
+.forest-back:hover {
+    opacity: 1;
+}
+
+
+/* TITLE */
+
+.forest-title {
+    position: absolute;
+
+    top: 12%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    z-index: 10;
+
+    width: 90%;
+}
+
+
+.forest-title p {
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.5;
+
+    margin-bottom: 15px;
+}
+
+
+.forest-title h1 {
+    font-size: clamp(28px, 5vw, 50px);
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+}
+
+
+/* TREES */
+
+.forest-trees {
+    position: absolute;
+    inset: 0;
+}
+
+
+.tree {
+    position: absolute;
+
+    color: #19382d;
+
+    font-size: 180px;
+
+    opacity: 0.8;
+
+    text-shadow:
+        0 0 30px rgba(80,150,120,0.2);
+}
+
+
+.tree-one {
+    left: 3%;
+    bottom: 5%;
+}
+
+
+.tree-two {
+    left: 20%;
+    bottom: -5%;
+
+    font-size: 230px;
+}
+
+
+.tree-three {
+    right: 8%;
+    bottom: 0;
+
+    font-size: 210px;
+}
+
+
+.tree-four {
+    right: 25%;
+    bottom: -8%;
+
+    font-size: 250px;
+}
+
+
+/* BENCH */
+
+.forest-bench {
+    position: absolute;
+
+    left: 50%;
+    bottom: 20%;
+
+    transform: translateX(-50%);
+
+    width: 220px;
+    height: 130px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.forest-bench:hover {
+    transform:
+        translateX(-50%)
+        translateY(-6px);
+}
+
+
+.bench-back {
+    position: absolute;
+
+    left: 15px;
+    top: 10px;
+
+    width: 190px;
+    height: 55px;
+
+    border: 6px solid #4d3928;
+
+    border-bottom: none;
+
+    border-radius: 8px 8px 0 0;
+}
+
+
+.bench-seat {
+    position: absolute;
+
+    left: 5px;
+    top: 60px;
+
+    width: 210px;
+    height: 20px;
+
+    background: #604833;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.4);
+}
+
+
+.bench-leg {
+    position: absolute;
+
+    top: 80px;
+
+    width: 10px;
+    height: 45px;
+
+    background: #3d2d21;
+}
+
+
+.bench-leg.left {
+    left: 35px;
+}
+
+
+.bench-leg.right {
+    right: 35px;
+}
+
+
+.forest-bench span {
+    position: absolute;
+
+    left: 50%;
+    top: 105px;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.45;
+
+    white-space: nowrap;
+}
+
+
+/* FIREFLIES */
+
+.firefly {
+    position: absolute;
+
+    color: #d8e8a8;
+
+    font-size: 12px;
+
+    text-shadow:
+        0 0 10px #d8e8a8,
+        0 0 20px #a8c878;
+
+    animation: fireflyFloat 4s ease-in-out infinite;
+
+    z-index: 8;
+}
+
+
+.firefly-one {
+    left: 25%;
+    top: 35%;
+}
+
+
+.firefly-two {
+    left: 70%;
+    top: 42%;
+
+    animation-delay: 1s;
+}
+
+
+.firefly-three {
+    left: 38%;
+    top: 60%;
+
+    animation-delay: 2s;
+}
+
+
+.firefly-four {
+    right: 20%;
+    top: 28%;
+
+    animation-delay: 3s;
+}
+
+
+/* FOREST MESSAGE */
+
+.forest-message {
+    display: none;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(560px, 88%);
+
+    max-height: 75vh;
+
+    overflow-y: auto;
+
+    padding: 50px 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eef2e9,
+            #dce5dc
+        );
+
+    color: #183027;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.6);
+
+    text-align: center;
+
+    z-index: 50;
+
+    animation: letterOpen 0.5s ease;
+}
+
+
+.forest-message p {
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+    opacity: 0.8;
+}
+
+
+.forest-ending {
+    margin-top: 30px;
+
+    font-size: 17px;
+
+    opacity: 1 !important;
+}
+
+
+.forest-message-close {
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    background: none;
+    border: none;
+
+    color: #183027;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    opacity: 0.5;
+}
+
+
+.forest-message-close:hover {
+    opacity: 1;
+}
+
+
+@keyframes fireflyFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateY(-12px);
+        opacity: 1;
+    }
+
+}
+
 
 
 /* =========================
