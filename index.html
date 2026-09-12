@@ -1,267 +1,130 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Our Little World</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- INTRO -->
-
     <div id="intro">
-
         <div class="intro-content">
+            <p class="small-text">A little place I made for you.</p>
 
-            <p class="small-text">
-                A little place I made for you.
-            </p>
+            <h1>Our Little World</h1>
 
-            <h1>
-                Our Little World
-            </h1>
-
-            <button onclick="enterWorld()">
-                ENTER
-            </button>
-
+            <button onclick="enterWorld()">ENTER</button>
         </div>
-
     </div>
 
 
-    <!-- WORLD -->
-
+    <!-- MAIN WORLD -->
     <main id="world">
 
         <div class="stars"></div>
-
         <div class="moon"></div>
 
-
-        <!-- CENTRAL STAR -->
-
         <div class="center-light">
-
             <div class="glow"></div>
-
-            <div class="little-star">
-                ✦
-            </div>
-
+            <div class="little-star">✦</div>
         </div>
 
 
         <!-- HOME -->
-
-        <button
-            class="world-place home"
-            onclick="openPlace('home')"
-        >
-
+        <button class="world-place home" onclick="openHome()">
             <span class="icon">♡</span>
-
-            <span class="place-name">
-                HOME
-            </span>
-
+            <span class="place-name">HOME</span>
         </button>
 
 
         <!-- FOREST -->
-
-        <button
-            class="world-place forest"
-            onclick="openPlace('forest')"
-        >
-
+        <button class="world-place forest" onclick="openForest()">
             <span class="icon">♣</span>
-
-            <span class="place-name">
-                THE FOREST
-            </span>
-
+            <span class="place-name">THE FOREST</span>
         </button>
-<!-- OCEAN -->
 
-<button
-    class="world-place ocean"
-    onclick="openOcean()"
->
 
-    <span class="icon">≈</span>
-
-    <span class="place-name">
-        THE OCEAN
-    </span>
-
-</button>
-
-        
+        <!-- OCEAN -->
+        <button class="world-place ocean" onclick="openOcean()">
+            <span class="icon">≈</span>
+            <span class="place-name">THE OCEAN</span>
+        </button>
 
 
         <!-- OBSERVATORY -->
-
-        <button
-            class="world-place observatory"
-            onclick="openPlace('observatory')"
-        >
-
+        <button class="world-place observatory" onclick="openObservatory()">
             <span class="icon">✦</span>
-
-            <span class="place-name">
-                OBSERVATORY
-            </span>
-
+            <span class="place-name">OBSERVATORY</span>
         </button>
 
 
-        <!-- FUTURE -->
-
-        <button
-            class="world-place future"
-            onclick="openPlace('future')"
-        >
-
+        <!-- MYSTERY -->
+        <button class="world-place future" onclick="openMystery()">
             <span class="icon">◇</span>
-
-            <span class="place-name">
-                ?
-            </span>
-
+            <span class="place-name">?</span>
         </button>
 
 
         <div class="world-message">
-
             <p>
                 There are places here<br>
                 that only exist because of us.
             </p>
-
         </div>
 
     </main>
-<!-- OCEAN SCREEN -->
-
-<div id="ocean-screen">
-
-    <button
-        class="ocean-back"
-        onclick="closeOcean()"
-    >
-        ← BACK TO OUR WORLD
-    </button>
 
 
-    <div class="ocean-content">
+    <!-- =========================
+         HOME
+    ========================= -->
 
-        <p class="ocean-label">
-            THE OCEAN
-        </p>
+    <section id="home-letter" class="screen">
 
-        <h1>
-            Come sit with me.
-        </h1>
-
-        <p>
-            If the world ever gets too loud,
-            we can just come here for a while.
-        </p>
-
-        <p>
-            No talking. No worrying.
-            Just you, me, and the sound of the water.
-        </p>
-
-        <span class="ocean-heart">
-            ♡
-        </span>
-
-    </div>
-
-</div>
-
-    <!-- HOME -->
-
-    <div id="home-letter">
-
-        <button
-            class="back-button"
-            onclick="closeHome()"
-        >
+        <button class="back-button" onclick="closeHome()">
             ← BACK TO OUR WORLD
         </button>
 
-
         <div class="letter-area">
 
-            <p class="letter-label">
-                HOME
-            </p>
+            <p class="letter-label">HOME</p>
 
             <h1 class="letter-title">
                 A little letter for you.
             </h1>
 
-
-            <div
-                class="envelope"
-                onclick="openLetter()"
-            >
+            <div class="envelope" onclick="openLetter()">
 
                 <div class="envelope-flap"></div>
 
                 <div class="envelope-body">
-
                     <span>♡</span>
-
-                    <p>
-                        OPEN ME
-                    </p>
-
+                    <p>OPEN ME</p>
                 </div>
 
             </div>
 
-
-            <p class="letter-hint">
-                click the envelope
-            </p>
+            <p class="letter-hint">click the envelope</p>
 
         </div>
 
 
-        <!-- LETTER -->
+        <div id="letter-content" class="letter-content">
 
-        <div
-            id="letter-content"
-            class="letter-content"
-        >
+            <button class="letter-close" onclick="closeLetter()">×</button>
 
-            <button
-                class="letter-close"
-                onclick="closeLetter()"
-            >
-                ×
-            </button>
-
-
-            <p class="letter-small">
-                TO MY NANU,
-            </p>
-
+            <p class="letter-small">TO MY NANU,</p>
 
             <h2>
                 I know it's been really, really bad
                 these past few weeks.
             </h2>
-
 
             <p>
                 And I just want to say that I love you
@@ -271,14 +134,12 @@
                 that I'm trying.
             </p>
 
-
             <p>
                 I'm sorry for being like this lately.
                 I promise I'll be back to normal.
                 I swear I will. I'm just sick for a while,
                 and tired, and I'm sorry.
             </p>
-
 
             <p>
                 I spent a really, really long time
@@ -289,12 +150,10 @@
                 about you.
             </p>
 
-
             <p>
                 I hope you love this little world
                 as much as I loved making it for you.
             </p>
-
 
             <p class="letter-ending">
                 I love you so, so much. Mwah. ♡
@@ -302,81 +161,43 @@
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- FOREST -->
+    <!-- =========================
+         FOREST
+    ========================= -->
 
-    <div id="forest-screen">
+    <section id="forest-screen" class="screen">
 
-        <button
-            class="forest-back"
-            onclick="closeForest()"
-        >
+        <button class="forest-back" onclick="closeForest()">
             ← BACK TO OUR WORLD
         </button>
 
-
         <div class="forest-heading">
-
-            <p>
-                THE FOREST
-            </p>
-
-            <h1>
-                Stay here for a while.
-            </h1>
-
+            <p>THE FOREST</p>
+            <h1>Stay here for a while.</h1>
         </div>
 
+        <div class="forest-tree tree-left">♣</div>
+        <div class="forest-tree tree-right">♣</div>
 
-        <div class="forest-tree tree-left">
-            ♣
-        </div>
-
-        <div class="forest-tree tree-right">
-            ♣
-        </div>
-
-
-        <button
-            class="forest-bench"
-            onclick="openBench()"
-        >
+        <button class="forest-bench" onclick="openBench()">
 
             <div class="bench-back"></div>
-
             <div class="bench-seat"></div>
-
             <div class="bench-leg bench-left"></div>
-
             <div class="bench-leg bench-right"></div>
 
-            <span>
-                SIT HERE
-            </span>
+            <span>SIT HERE</span>
 
         </button>
 
+        <div class="forest-firefly firefly-one">✦</div>
+        <div class="forest-firefly firefly-two">✦</div>
+        <div class="forest-firefly firefly-three">✦</div>
+        <div class="forest-firefly firefly-four">✦</div>
 
-        <div class="forest-firefly firefly-one">
-            ✦
-        </div>
-
-        <div class="forest-firefly firefly-two">
-            ✦
-        </div>
-
-        <div class="forest-firefly firefly-three">
-            ✦
-        </div>
-
-        <div class="forest-firefly firefly-four">
-            ✦
-        </div>
-
-
-        <!-- FOREST MESSAGE -->
 
         <div id="forest-message">
 
@@ -387,19 +208,16 @@
                 ×
             </button>
 
-
             <p>
                 You've been doing a lot these days.
                 You've been working very, very hard,
                 and you've been trying very, very hard.
             </p>
 
-
             <p>
                 I know how hard you've been trying,
                 even when things haven't been easy.
             </p>
-
 
             <p>
                 So just sit here for a while.
@@ -408,19 +226,16 @@
                 you've done to get here.
             </p>
 
-
             <p>
                 Think about everything you've been through,
                 everything you've overcome,
                 and everything you've worked so hard for.
             </p>
 
-
             <p>
                 And for a moment, just be proud of yourself.
                 Be happy with how far you've come.
             </p>
-
 
             <p class="forest-ending">
                 You deserve to sit here for a while. ♡
@@ -428,33 +243,142 @@
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- POPUP -->
+    <!-- =========================
+         OCEAN
+    ========================= -->
 
-    <div id="popup">
+    <section id="ocean-screen" class="screen">
 
-        <div class="popup-box">
+        <button class="ocean-back" onclick="closeOcean()">
+            ← BACK TO OUR WORLD
+        </button>
 
-            <button
-                class="close"
-                onclick="closePlace()"
-            >
-                ×
-            </button>
+        <div class="ocean-content">
 
-            <h2 id="popup-title"></h2>
+            <p class="ocean-label">THE OCEAN</p>
 
-            <p id="popup-text"></p>
+            <h1>Come sit with me.</h1>
+
+            <p>
+                If the world ever gets too loud,
+                we can just come here for a while.
+            </p>
+
+            <p>
+                No talking. No worrying.
+                Just you, me, and the sound of the water.
+            </p>
+
+            <span class="ocean-heart">♡</span>
 
         </div>
 
-    </div>
+    </section>
+
+
+    <!-- =========================
+         OBSERVATORY
+    ========================= -->
+
+    <section id="observatory-screen" class="screen">
+
+        <button
+            class="observatory-back"
+            onclick="closeObservatory()"
+        >
+            ← BACK TO OUR WORLD
+        </button>
+
+        <div class="observatory-stars"></div>
+
+        <div class="observatory-heading">
+
+            <p>THE OBSERVATORY</p>
+
+            <h1>Look a little closer.</h1>
+
+        </div>
+
+        <div class="constellation constellation-one">✦</div>
+        <div class="constellation constellation-two">✧</div>
+        <div class="constellation constellation-three">⋆</div>
+
+        <div class="telescope">
+
+            <div class="telescope-body"></div>
+            <div class="telescope-lens"></div>
+
+            <div class="telescope-leg left-leg"></div>
+            <div class="telescope-leg right-leg"></div>
+
+        </div>
+
+        <div class="observatory-message">
+
+            <p class="observatory-small">
+                SOMEWHERE IN THE STARS
+            </p>
+
+            <h2>
+                I think I'd find you.
+            </h2>
+
+            <p>
+                No matter how many stars there are,
+                somehow I'd still look for yours.
+            </p>
+
+            <span>✦</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MYSTERY
+    ========================= -->
+
+    <section id="mystery-screen" class="screen">
+
+        <button class="mystery-back" onclick="closeMystery()">
+            ← BACK TO OUR WORLD
+        </button>
+
+        <div class="mystery-content">
+
+            <div class="mystery-symbol">◇</div>
+
+            <p class="mystery-label">
+                SOMETHING IS WAITING HERE
+            </p>
+
+            <h1>Not yet.</h1>
+
+            <p>
+                There are some places in our little world
+                that we haven't reached yet.
+            </p>
+
+            <p>
+                Maybe one day,
+                we'll come back here.
+            </p>
+
+            <div class="mystery-line"></div>
+
+            <span>01 / ∞</span>
+
+        </div>
+
+    </section>
 
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
+
