@@ -1,82 +1,79 @@
 function enterWorld() {
-
     const intro = document.getElementById("intro");
-
     intro.classList.add("hidden");
-
 }
 
 
 function openPlace(place) {
 
+    const world = document.getElementById("world");
+    const homeRoom = document.getElementById("home-room");
+
     const popup = document.getElementById("popup");
-
     const title = document.getElementById("popup-title");
-
     const text = document.getElementById("popup-text");
 
+
+    // HOME
     if (place === "home") {
-        document.getElementById("world").style.display = "none";
-        document.getElementById("home-room").style.display = "block";
+        world.style.display = "none";
+        homeRoom.style.display = "block";
         return;
     }
 
 
+    // FOREST
     if (place === "forest") {
-
         title.textContent = "THE FOREST";
 
         text.textContent =
             "Somewhere in here are memories I never want to forget.";
-
     }
 
 
+    // OCEAN
     if (place === "ocean") {
-
         title.textContent = "THE OCEAN";
 
         text.textContent =
             "There are things floating around here that I've never said enough.";
-
     }
 
 
+    // OBSERVATORY
     if (place === "observatory") {
-
         title.textContent = "OBSERVATORY";
 
         text.textContent =
             "Look closely. Some of the stars are made from our memories.";
-
     }
 
 
+    // FUTURE
     if (place === "future") {
-
         title.textContent = "???";
 
         text.textContent =
             "You haven't unlocked this place yet.";
-
     }
 
 
     popup.style.display = "flex";
-
 }
 
 
 function closePlace() {
+    const popup = document.getElementById("popup");
 
-    document.getElementById("popup").style.display = "none";
-
+    popup.style.display = "none";
 }
 
 
 function closeHome() {
 
-    document.getElementById("home-room").style.display = "none";
-    document.getElementById("world").style.display = "block";
+    const world = document.getElementById("world");
+    const homeRoom = document.getElementById("home-room");
 
-} 
+    homeRoom.style.display = "none";
+    world.style.display = "block";
+}
