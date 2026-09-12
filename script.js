@@ -73,7 +73,7 @@ function closeBench() {
 
 
 /* =====================================================
-   OCEAN
+   🌊 OCEAN
 ===================================================== */
 
 let oceanFound = 0;
@@ -83,17 +83,17 @@ const oceanMessages = {
     first: {
         title: "A little first.",
         text:
-            "There are so many firsts we've had together. And somehow, even the smallest ones became memories I wanted to keep."
+            "There are so many firsts we've had together. Somehow, even the smallest ones became memories I wanted to keep."
     },
 
     memory: {
         title: "A memory.",
         text:
-            "Some moments are tiny when they happen, but somehow become huge when you look back at them."
+            "Some moments are tiny when they happen, but become huge when you look back at them."
     },
 
     love: {
-        title: "One thing I love.",
+        title: "Something I love.",
         text:
             "I love the way you can make ordinary moments feel like they belong to just us."
     },
@@ -118,6 +118,7 @@ function openOcean() {
     document.getElementById("world").style.display = "none";
 
     document.getElementById("ocean-screen").style.display = "block";
+
 }
 
 
@@ -130,6 +131,7 @@ function closeOcean() {
     document.getElementById("ocean-screen").style.display = "none";
 
     document.getElementById("world").style.display = "block";
+
 }
 
 
@@ -143,11 +145,12 @@ function collectOceanItem(element, type) {
 
     element.style.opacity = "0";
 
-    element.style.transform = "scale(0.3)";
+    element.style.transform = "scale(0.2)";
 
     oceanFound++;
 
-    document.getElementById("ocean-count").textContent = oceanFound;
+    document.getElementById("ocean-count").textContent =
+        oceanFound;
 
 
     const message = oceanMessages[type];
@@ -172,7 +175,7 @@ function collectOceanItem(element, type) {
             document.getElementById("ocean-complete").style.display =
                 "block";
 
-        }, 1200);
+        }, 1300);
 
     }
 
@@ -183,11 +186,12 @@ function closeOceanMessage() {
 
     document.getElementById("ocean-message").style.display =
         "none";
+
 }
 
 
 /* =====================================================
-   OBSERVATORY
+   🔭 OBSERVATORY
 ===================================================== */
 
 let starsFound = 0;
@@ -195,19 +199,19 @@ let starsFound = 0;
 const starMessages = {
 
     one: {
-        title: "The quiet one.",
+        title: "The quiet star.",
         text:
             "Some of my favorite moments with you aren't the huge ones. They're the quiet little moments that only we notice."
     },
 
     two: {
-        title: "The bright one.",
+        title: "The bright star.",
         text:
             "You have this annoying little habit of making my entire day better without even trying."
     },
 
     three: {
-        title: "The distant one.",
+        title: "The distant star.",
         text:
             "Even when we're far apart, you're still somehow one of the closest people to me."
     },
@@ -227,6 +231,7 @@ function openObservatory() {
 
     document.getElementById("observatory-screen").style.display =
         "block";
+
 }
 
 
@@ -242,6 +247,7 @@ function closeObservatory() {
         "none";
 
     document.getElementById("world").style.display = "block";
+
 }
 
 
@@ -275,6 +281,29 @@ function findStar(element, type) {
         "block";
 
 
+    /* Build the constellation */
+
+    if (starsFound >= 1) {
+
+        document.querySelector(".line-one").style.opacity = "1";
+
+    }
+
+    if (starsFound >= 2) {
+
+        document.querySelector(".line-two").style.opacity = "1";
+
+    }
+
+    if (starsFound >= 3) {
+
+        document.querySelector(".line-three").style.opacity = "1";
+
+    }
+
+
+    /* All stars found */
+
     if (starsFound === 4) {
 
         setTimeout(function() {
@@ -285,7 +314,7 @@ function findStar(element, type) {
             document.getElementById("observatory-complete").style.display =
                 "block";
 
-        }, 1200);
+        }, 1300);
 
     }
 
@@ -296,6 +325,7 @@ function closeObservatoryMessage() {
 
     document.getElementById("observatory-message").style.display =
         "none";
+
 }
 
 
