@@ -1242,19 +1242,18 @@ body {
     z-index: 200;
 
     background:
-        radial-gradient(
-            circle at 50% 30%,
-            rgba(120, 190, 210, 0.18),
-            transparent 35%
-        ),
-        linear-gradient(
-            to bottom,
-            #071c2b,
-            #0b3447,
-            #05202d,
-            #03151e
-        );
-
+    radial-gradient(
+        ellipse at 50% 20%,
+        rgba(90, 190, 220, 0.35),
+        transparent 45%
+    ),
+    linear-gradient(
+        to bottom,
+        #0b3d52,
+        #07516a,
+        #063b50,
+        #021923
+    );
     color: #e6f5f7;
 
     text-align: center;
