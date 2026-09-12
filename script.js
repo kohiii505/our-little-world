@@ -139,4 +139,19 @@ function closeBench() {
 
     document.getElementById("forest-message").style.display = "none";
 
+}function openOcean() {
+
+    document.getElementById("world").style.display = "none";
+
+    document.getElementById("ocean-screen").style.display = "block";
+
+}
+
+
+function closeOcean() {
+
+    document.getElementById("ocean-screen").style.display = "none";
+
+    document.getElementById("world").style.display = "block";
+
 }
