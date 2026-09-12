@@ -72,7 +72,6 @@ body {
 .intro-content button {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.5);
-
     color: white;
 
     padding: 14px 40px;
@@ -103,7 +102,7 @@ body {
     width: 100vw;
     height: 100vh;
 
-    overflow: hidden; 
+    overflow: hidden;
 
     background:
         radial-gradient(
@@ -163,20 +162,25 @@ body {
 
 
 /* =========================
-   CENTER
+   CENTER LIGHT
 ========================= */
 
 .center-light {
     position: absolute;
+
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
+
     width: 100px;
     height: 100px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .glow {
     position: absolute;
 
@@ -196,7 +200,7 @@ body {
 
 .little-star {
     font-size: 28px;
-    color: #ffffff;
+    color: white;
 
     text-shadow:
         0 0 8px white,
@@ -205,15 +209,16 @@ body {
 
     animation: float 3s ease-in-out infinite;
 }
+
+
 /* =========================
-   PLACES
+   WORLD PLACES
 ========================= */
 
 .world-place {
     position: absolute;
 
     background: transparent;
-
     border: none;
 
     color: white;
@@ -255,7 +260,9 @@ body {
 }
 
 
-/* POSITIONS */
+/* =========================
+   WORLD PLACE POSITIONS
+========================= */
 
 .home {
     left: 25%;
@@ -286,7 +293,7 @@ body {
 
 
 /* =========================
-   MESSAGE
+   WORLD MESSAGE
 ========================= */
 
 .world-message {
@@ -392,6 +399,190 @@ body {
 
 
 /* =========================
+   HOME ROOM
+========================= */
+
+#home-room {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #26365c 0%,
+            #111a32 45%,
+            #070b17 100%
+        );
+
+    z-index: 10;
+
+    overflow: hidden;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    z-index: 20;
+}
+
+
+/* WINDOW */
+
+.room-window {
+    position: absolute;
+
+    width: 220px;
+    height: 280px;
+
+    top: 12%;
+    right: 15%;
+
+    border: 8px solid #151b2c;
+
+    background: #080d1c;
+
+    box-shadow:
+        0 0 30px rgba(120,160,255,0.2);
+
+    z-index: 11;
+}
+
+.window-sky {
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            white 1px,
+            transparent 2px
+        ),
+        radial-gradient(
+            circle at 70% 40%,
+            white 1px,
+            transparent 2px
+        ),
+        radial-gradient(
+            circle at 50% 70%,
+            white 1px,
+            transparent 2px
+        ),
+        linear-gradient(
+            #080d1c,
+            #182442
+        );
+}
+
+
+/* BED */
+
+.room-bed {
+    position: absolute;
+
+    width: 430px;
+    height: 170px;
+
+    left: 13%;
+    bottom: 15%;
+
+    background: #18213a;
+
+    border-radius:
+        12px 12px 4px 4px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.4);
+
+    z-index: 11;
+}
+
+.pillow {
+    position: absolute;
+
+    width: 120px;
+    height: 55px;
+
+    left: 25px;
+    top: 20px;
+
+    background: #dce5f5;
+
+    border-radius: 12px;
+}
+
+.blanket {
+    position: absolute;
+
+    width: 270px;
+    height: 130px;
+
+    right: 15px;
+    top: 20px;
+
+    background: #29395e;
+
+    border-radius: 12px;
+}
+
+
+/* LAMP */
+
+.room-lamp {
+    position: absolute;
+
+    right: 18%;
+    bottom: 22%;
+
+    font-size: 35px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 30px #9fc4ff;
+
+    z-index: 12;
+}
+
+
+/* BOOKS */
+
+.room-books {
+    position: absolute;
+
+    left: 18%;
+    bottom: 10%;
+
+    font-size: 35px;
+
+    z-index: 12;
+}
+
+
+/* =========================
    ANIMATIONS
 ========================= */
 
@@ -489,158 +680,17 @@ body {
     }
 
     .ocean {
-              .observatory {
-        right: 10%;
-    }
-
-    .ocean {
         right: 7%;
     }
 }
 
-/* EXTRA STAR LAYER */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image:
-        radial-gradient(white 1px, transparent 1px),
-        radial-gradient(white 1px, transparent 1px);
-    background-size: 80px 80px, 130px 130px;
-    background-position: 0 0, 40px 60px;
-    opacity: 0.25;
-    pointer-events: none;
-}
 
-/* HOME ROOM */
+/* =========================
+   HIDDEN
+========================= */
 
-#home-room {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            #26365c 0%,
-            #111a32 45%,
-            #070b17 100%
-        );
-    z-index: 10;
-    overflow: hidden;
-}
-
-.back-button {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-family: Georgia, serif;
-    font-size: 12px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.room-window {
-    position: absolute;
-    width: 220px;
-    height: 280px;
-    top: 12%;
-    right: 15%;
-    border: 8px solid #151b2c;
-    background: #080d1c;
-    box-shadow: 0 0 30px rgba(120,160,255,0.2);
-}
-
-.window-sky {
-    width: 100%;
-    height: 100%;
-    background:
-        radial-gradient(circle at 30% 25%, white 1px, transparent 2px),
-        radial-gradient(circle at 70% 40%, white 1px, transparent 2px),
-        radial-gradient(circle at 50% 70%, white 1px, transparent 2px),
-        linear-gradient(#080d1c, #182442);
-}
-
-.room-bed {
-    position: absolute;
-    width: 430px;
-    height: 170px;
-    left: 13%;
-    bottom: 15%;
-    background: #18213a;
-    border-radius: 12px 12px 4px 4px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-}
-
-.pillow {
-    position: absolute;
-    width: 120px;
-    height: 55px;
-    left: 25px;
-    top: 20px;
-    background: #dce5f5;
-    border-radius: 12px;
-}
-
-.blanket {
-    position: absolute;
-    width: 270px;
-    height: 130px;
-    right: 15px;
-    top: 20px;
-    background: #29395e;
-    border-radius: 12px;
-}
-
-.room-lamp {
-    position: absolute;
-    right: 18%;
-    bottom: 22%;
-    font-size: 35px;
-    color: #fff;
-    text-shadow:
-        0 0 10px white,
-        0 0 30px #9fc4ff;
-}
-
-.room-books {
-    position: absolute;
-    left: 18%;
-    bottom: 10%;
-    font-size: 35px;
-}
 .hidden {
     display: none !important;
 }
-.room-window {
-    display: block !important;
-}
 
-.room-bed {
-    display: block !important;\
-}
-    #home-room .room-window {
-    display: block !important;
-    position: absolute !important;
-    width: 220px !important;
-    height: 280px !important;
-    top: 12% !important;
-    right: 15% !important;
-    background: red !important;
-    border: 8px solid white !important;
-    z-index: 999 !important;
-}
 
-#home-room .room-bed {
-    display: block !important;
-    position: absolute !important;
-    width: 430px !important;
-    height: 170px !important;
-    left: 13% !important;
-    bottom: 15% !important;
-    background: red !important;
-    z-index: 999 !important;
-}
