@@ -196,17 +196,15 @@ body {
 
 .little-star {
     font-size: 28px;
-
-    color: #eaf2ff;
+    color: #ffffff;
 
     text-shadow:
-        0 0 10px white,
-        0 0 30px #8db5ff;
+        0 0 8px white,
+        0 0 18px white,
+        0 0 35px #9fc4ff;
 
-    animation: float 3s ease-in-out infinite; 
+    animation: float 3s ease-in-out infinite;
 }
-
-
 /* =========================
    PLACES
 ========================= */
