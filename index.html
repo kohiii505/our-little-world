@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,43 +10,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- INTRO SCREEN -->
-    <div id="intro">
-        <div class="intro-content">
-            <p class="small-text">A little place I made for you.</p>
+    <!-- =========================
+         INTRO SCREEN
+    ========================== -->
 
-            <h1>Our Little World</h1>
+    <div id="intro">
+
+        <div class="intro-content">
+
+            <p class="small-text">
+                A little place I made for you.
+            </p>
+
+            <h1>
+                Our Little World
+            </h1>
 
             <button onclick="enterWorld()">
                 ENTER
             </button>
+
         </div>
+
     </div>
 
 
-    <!-- THE WORLD -->
+    <!-- =========================
+         THE WORLD
+    ========================== -->
+
     <main id="world">
 
         <!-- STARS -->
         <div class="stars"></div>
 
+
         <!-- MOON -->
         <div class="moon"></div>
 
+
         <!-- CENTRAL LIGHT -->
         <div class="center-light">
+
             <div class="glow"></div>
-            <div class="little-star">✦</div>
+
+            <div class="little-star">
+                ✦
+            </div>
+
         </div>
 
 
         <!-- HOME -->
-        <button class="world-place home"
-                onclick="openPlace('home')">
+        <button
+            class="world-place home"
+            onclick="openPlace('home')"
+        >
 
-            <span class="icon">⌂</span>
+            <span class="icon">
+                ⌂
+            </span>
 
             <span class="place-name">
                 HOME
@@ -55,10 +82,14 @@
 
 
         <!-- FOREST -->
-        <button class="world-place forest"
-                onclick="openPlace('forest')">
+        <button
+            class="world-place forest"
+            onclick="openPlace('forest')"
+        >
 
-            <span class="icon">♣</span>
+            <span class="icon">
+                ♣
+            </span>
 
             <span class="place-name">
                 THE FOREST
@@ -68,10 +99,14 @@
 
 
         <!-- OCEAN -->
-        <button class="world-place ocean"
-                onclick="openPlace('ocean')">
+        <button
+            class="world-place ocean"
+            onclick="openPlace('ocean')"
+        >
 
-            <span class="icon">≈</span>
+            <span class="icon">
+                ≈
+            </span>
 
             <span class="place-name">
                 THE OCEAN
@@ -81,10 +116,14 @@
 
 
         <!-- OBSERVATORY -->
-        <button class="world-place observatory"
-                onclick="openPlace('observatory')">
+        <button
+            class="world-place observatory"
+            onclick="openPlace('observatory')"
+        >
 
-            <span class="icon">✦</span>
+            <span class="icon">
+                ✦
+            </span>
 
             <span class="place-name">
                 OBSERVATORY
@@ -94,10 +133,14 @@
 
 
         <!-- FUTURE -->
-        <button class="world-place future"
-                onclick="openPlace('future')">
+        <button
+            class="world-place future"
+            onclick="openPlace('future')"
+        >
 
-            <span class="icon">◇</span>
+            <span class="icon">
+                ◇
+            </span>
 
             <span class="place-name">
                 ?
@@ -108,85 +151,91 @@
 
         <!-- LITTLE MESSAGE -->
         <div class="world-message">
-            <p>There are places here<br>
-            that only exist because of us.</p>
+
+            <p>
+                There are places here<br>
+                that only exist because of us.
+            </p>
+
         </div>
 
     </main>
-<!-- HOME ROOM -->
-<div id="home-room">
 
-    <button class="back-button" onclick="closeHome()">
-        ← BACK
-    </button>
 
-    <div class="room-window">
-        <div class="window-sky"></div>
-    </div>
+    <!-- =========================
+         HOME ROOM
+    ========================== -->
 
-    <div class="room-bed">
-        <div class="pillow"></div>
-        <div class="blanket"></div>
-    </div>
+    <div id="home-room">
 
-    <div class="room-lamp">
-        ✦
-    </div>
-
-    <div class="room-books">
-        📚
-    </div>
-
-</div>
-
-    <!-- PLACE POPUP -->
-<div id="popup">
-
-    <div class="popup-box">
-
-        <button class="close" onclick="closePlace()">
-            ×
+        <!-- BACK BUTTON -->
+        <button
+            class="back-button"
+            onclick="closeHome()"
+        >
+            ← BACK
         </button>
 
-        <h2 id="popup-title"></h2>
 
-        <p id="popup-text"></p>
+        <!-- WINDOW -->
+        <div class="room-window">
 
-    </div>
-    <!-- PLACE POPUP -->
-<div id="popup">
+            <div class="window-sky"></div>
 
-    <div class="popup-box">
+        </div>
 
-        <button class="close" onclick="closePlace()">
-            ×
-        </button>
 
-        <h2 id="popup-title"></h2>
+        <!-- BED -->
+        <div class="room-bed">
 
-        <p id="popup-text"></p>
+            <div class="pillow"></div>
 
-    </div>
-<!-- PLACE POPUP -->
-<div id="popup">
+            <div class="blanket"></div>
 
-    <div class="popup-box">
+        </div>
 
-        <button class="close" onclick="closePlace()">
-            ×
-        </button>
 
-        <h2 id="popup-title"></h2>
+        <!-- LAMP -->
+        <div class="room-lamp">
+            ✦
+        </div>
 
-        <p id="popup-text"></p>
+
+        <!-- BOOKS -->
+        <div class="room-books">
+            📚
+        </div>
 
     </div>
 
-</div>
 
-<script src="script.js"></script>
+    <!-- =========================
+         POPUP
+    ========================== -->
+
+    <div id="popup">
+
+        <div class="popup-box">
+
+            <button
+                class="close"
+                onclick="closePlace()"
+            >
+                ×
+            </button>
+
+            <h2 id="popup-title"></h2>
+
+            <p id="popup-text"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
-</html>
 
-</div><
+</html>
