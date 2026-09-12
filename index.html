@@ -59,29 +59,20 @@
             <span class="place-name">THE OCEAN</span>
         </button>
 
-
-        <!-- OBSERVATORY -->
+<!-- OBSERVATORY -->
 
 <section id="observatory-screen" class="screen">
 
-    <button
-        class="observatory-back"
-        onclick="closeObservatory()">
+    <button class="observatory-back" onclick="closeObservatory()">
         ← BACK TO OUR WORLD
     </button>
 
     <div class="observatory-sky"></div>
 
     <div class="observatory-title">
-
         <p>THE OBSERVATORY</p>
-
         <h1>Find the stars.</h1>
-
-        <span>
-            Some stars are brighter for a reason.
-        </span>
-
+        <span>Some stars are brighter for a reason.</span>
     </div>
 
     <!-- BACKGROUND STARS -->
@@ -103,33 +94,19 @@
     <div class="tiny-star star-o">·</div>
     <div class="tiny-star star-p">·</div>
 
+    <!-- FOUR STARS TO FIND -->
 
-    <!-- SPECIAL STARS -->
+    <button class="hidden-star important-one"
+        onclick="findStar(this, 'one')">✦</button>
 
-    <button
-        class="hidden-star important-one"
-        onclick="findStar(this, 'one')">
-        ✦
-    </button>
+    <button class="hidden-star important-two"
+        onclick="findStar(this, 'two')">✦</button>
 
-    <button
-        class="hidden-star important-two"
-        onclick="findStar(this, 'two')">
-        ✦
-    </button>
+    <button class="hidden-star important-three"
+        onclick="findStar(this, 'three')">✦</button>
 
-    <button
-        class="hidden-star important-three"
-        onclick="findStar(this, 'three')">
-        ✦
-    </button>
-
-    <button
-        class="hidden-star important-four"
-        onclick="findStar(this, 'four')">
-        ✦
-    </button>
-
+    <button class="hidden-star important-four"
+        onclick="findStar(this, 'four')">✦</button>
 
     <!-- CONSTELLATION -->
 
@@ -137,28 +114,22 @@
     <div class="constellation-line line-two"></div>
     <div class="constellation-line line-three"></div>
 
+    <!-- COUNTER -->
 
     <div class="observatory-counter">
         <span id="star-count">0</span> / 4 STARS FOUND
     </div>
 
-
     <!-- TELESCOPE -->
 
     <div class="telescope">
-
         <div class="telescope-body"></div>
-
         <div class="telescope-lens"></div>
-
         <div class="telescope-leg left-leg"></div>
-
         <div class="telescope-leg right-leg"></div>
-
     </div>
 
-
-    <!-- STAR MESSAGE -->
+    <!-- MESSAGE -->
 
     <div id="observatory-message">
 
@@ -176,83 +147,21 @@
 
     </div>
 
-
-    <!-- COMPLETE -->
+    <!-- COMPLETION -->
 
     <div id="observatory-complete">
 
-        <div class="constellation-final">
-            ✦
-        </div>
+        <div class="constellation-final">✦</div>
 
         <p>CONSTELLATION COMPLETE</p>
 
-        <h2>
-            Out of all the stars,
-            I'd still look for yours.
-        </h2>
+        <h2>Out of all the stars, I'd still look for yours.</h2>
 
-        <span>
-            Somehow, I'd always recognize you.
-        </span>
+        <span>Somehow, I'd always recognize you.</span>
 
     </div>
 
 </section>
-
-
-<!-- MYSTERY / FUTURE -->
-
-<section id="mystery-screen" class="screen">
-
-    <div class="mystery-background"></div>
-
-    <button
-        class="mystery-back"
-        onclick="closeMystery()">
-        ← BACK TO OUR WORLD
-    </button>
-
-    <div class="mystery-content">
-
-        <p>THE LAST PLACE</p>
-
-        <h1>Our Future</h1>
-
-        <span>
-            Some things aren't meant to be discovered yet.
-        </span>
-
-        <button
-            class="mystery-button"
-            onclick="revealFuture()">
-            ✦ REVEAL
-        </button>
-
-        <div id="future-message">
-
-            <p>A LITTLE PROMISE</p>
-
-            <h2>
-                I don't know exactly
-                where we'll end up.
-            </h2>
-
-            <span>
-                But I know I want to keep making
-                memories with you along the way.
-                <br><br>
-                So let's leave some pages
-                unwritten for now.
-                ♡
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
 
         <!-- MYSTERY -->
 
