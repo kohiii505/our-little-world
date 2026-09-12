@@ -4,12 +4,14 @@
     padding: 0;
 }
 
+
 html,
 body {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
 
 body {
     font-family: Georgia, serif;
@@ -26,6 +28,10 @@ body {
     position: fixed;
     inset: 0;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background:
         radial-gradient(
             circle at center,
@@ -34,10 +40,6 @@ body {
             #02030a 100%
         );
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     z-index: 100;
 
     transition:
@@ -45,15 +47,18 @@ body {
         visibility 1.5s ease;
 }
 
+
 #intro.hidden {
     opacity: 0;
     visibility: hidden;
 }
 
+
 .intro-content {
     text-align: center;
     animation: appear 2s ease;
 }
+
 
 .small-text {
     font-size: 14px;
@@ -62,6 +67,7 @@ body {
     margin-bottom: 20px;
 }
 
+
 .intro-content h1 {
     font-size: clamp(40px, 7vw, 85px);
     font-weight: normal;
@@ -69,9 +75,11 @@ body {
     margin-bottom: 45px;
 }
 
+
 .intro-content button {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.5);
+
     color: white;
 
     padding: 14px 40px;
@@ -85,6 +93,7 @@ body {
         background 0.4s ease,
         transform 0.4s ease;
 }
+
 
 .intro-content button:hover {
     background: rgba(255,255,255,0.1);
@@ -147,10 +156,10 @@ body {
     width: 100px;
     height: 100px;
 
-    border-radius: 50%;
-
     top: 9%;
     right: 12%;
+
+    border-radius: 50%;
 
     background: #e8edf5;
 
@@ -162,7 +171,7 @@ body {
 
 
 /* =========================
-   CENTER LIGHT
+   CENTER STAR
 ========================= */
 
 .center-light {
@@ -181,6 +190,7 @@ body {
     align-items: center;
 }
 
+
 .glow {
     position: absolute;
 
@@ -198,8 +208,10 @@ body {
     animation: pulse 4s ease-in-out infinite;
 }
 
+
 .little-star {
     font-size: 28px;
+
     color: white;
 
     text-shadow:
@@ -234,9 +246,11 @@ body {
         opacity 0.5s ease;
 }
 
+
 .world-place:hover {
     transform: scale(1.12);
 }
+
 
 .icon {
     display: block;
@@ -248,6 +262,7 @@ body {
     text-shadow:
         0 0 15px rgba(180,210,255,0.6);
 }
+
 
 .place-name {
     display: block;
@@ -261,7 +276,7 @@ body {
 
 
 /* =========================
-   WORLD PLACE POSITIONS
+   POSITIONS
 ========================= */
 
 .home {
@@ -269,20 +284,24 @@ body {
     top: 42%;
 }
 
+
 .forest {
     left: 12%;
     top: 22%;
 }
+
 
 .ocean {
     right: 14%;
     top: 55%;
 }
 
+
 .observatory {
     right: 25%;
     top: 18%;
 }
+
 
 .future {
     left: 47%;
@@ -317,6 +336,316 @@ body {
 
 
 /* =========================
+   HOME LETTER
+========================= */
+
+#home-letter {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #26365c 0%,
+            #111a32 40%,
+            #070b17 100%
+        );
+
+    z-index: 150;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    opacity: 0.65;
+
+    z-index: 20;
+}
+
+
+.back-button:hover {
+    opacity: 1;
+}
+
+
+/* LETTER AREA */
+
+.letter-area {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    width: 90%;
+}
+
+
+.letter-label {
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.5;
+
+    margin-bottom: 15px;
+}
+
+
+.letter-title {
+    font-weight: normal;
+
+    font-size: clamp(28px, 5vw, 48px);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 45px;
+}
+
+
+/* ENVELOPE */
+
+.envelope {
+    position: relative;
+
+    width: 260px;
+    height: 170px;
+
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.envelope:hover {
+    transform:
+        translateY(-8px)
+        scale(1.03);
+}
+
+
+.envelope-body {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #dce5f5,
+            #aebbd3
+        );
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.45);
+}
+
+
+.envelope-body span {
+    position: absolute;
+
+    left: 50%;
+    top: 48%;
+
+    transform: translate(-50%, -50%);
+
+    color: #26365c;
+
+    font-size: 28px;
+}
+
+
+.envelope-body p {
+    position: absolute;
+
+    left: 50%;
+    bottom: 22px;
+
+    transform: translateX(-50%);
+
+    color: #26365c;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+}
+
+
+/* ENVELOPE FLAP */
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-top: 90px solid #c5d1e5;
+
+    z-index: 3;
+
+    filter:
+        drop-shadow(
+            0 3px 3px rgba(0,0,0,0.12)
+        );
+}
+
+
+.letter-hint {
+    margin-top: 25px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.4;
+}
+
+
+/* =========================
+   OPEN LETTER
+========================= */
+
+.letter-content {
+    display: none;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(600px, 88%);
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    padding: 55px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f0f3f8,
+            #dce4f0
+        );
+
+    color: #17213c;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.6);
+
+    animation: letterOpen 0.6s ease;
+
+    text-align: center;
+
+    z-index: 30;
+}
+
+
+.letter-content h2 {
+    font-weight: normal;
+
+    font-size: 27px;
+
+    line-height: 1.4;
+
+    margin-bottom: 30px;
+}
+
+
+.letter-content p {
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+    opacity: 0.8;
+}
+
+
+.letter-small {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.5 !important;
+}
+
+
+.letter-ending {
+    margin-top: 35px;
+
+    font-size: 18px;
+
+    opacity: 1 !important;
+}
+
+
+/* CLOSE LETTER */
+
+.letter-close {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    background: none;
+    border: none;
+
+    color: #17213c;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    opacity: 0.5;
+}
+
+
+.letter-close:hover {
+    opacity: 1;
+}
+
+
+/* =========================
    POPUP
 ========================= */
 
@@ -334,8 +663,9 @@ body {
 
     backdrop-filter: blur(8px);
 
-    z-index: 200;
+    z-index: 300;
 }
+
 
 .popup-box {
     position: relative;
@@ -351,7 +681,8 @@ body {
             #090d19
         );
 
-    border: 1px solid rgba(255,255,255,0.15);
+    border:
+        1px solid rgba(255,255,255,0.15);
 
     box-shadow:
         0 30px 80px rgba(0,0,0,0.6);
@@ -361,6 +692,7 @@ body {
     animation: popupIn 0.5s ease;
 }
 
+
 .popup-box h2 {
     font-weight: normal;
 
@@ -369,11 +701,13 @@ body {
     margin-bottom: 25px;
 }
 
+
 .popup-box p {
     line-height: 1.8;
 
     opacity: 0.75;
 }
+
 
 .close {
     position: absolute;
@@ -393,192 +727,9 @@ body {
     opacity: 0.6;
 }
 
+
 .close:hover {
     opacity: 1;
-}
-
-
-/* =========================
-   HOME ROOM
-========================= */
-
-#home-room {
-    display: none;
-
-    position: fixed;
-    inset: 0;
-
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            #26365c 0%,
-            #111a32 45%,
-            #070b17 100%
-        );
-
-    z-index: 10;
-
-    overflow: hidden;
-}
-
-
-/* BACK BUTTON */
-
-.back-button {
-    position: absolute;
-
-    top: 30px;
-    left: 30px;
-
-    background: transparent;
-    border: none;
-
-    color: white;
-
-    font-family: Georgia, serif;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-    opacity: 0.7;
-
-    z-index: 20;
-}
-
-
-/* WINDOW */
-
-.room-window {
-    position: absolute;
-
-    width: 220px;
-    height: 280px;
-
-    top: 12%;
-    right: 15%;
-
-    border: 8px solid #151b2c;
-
-    background: #080d1c;
-
-    box-shadow:
-        0 0 30px rgba(120,160,255,0.2);
-
-    z-index: 11;
-}
-
-.window-sky {
-    width: 100%;
-    height: 100%;
-
-    background:
-        radial-gradient(
-            circle at 30% 25%,
-            white 1px,
-            transparent 2px
-        ),
-        radial-gradient(
-            circle at 70% 40%,
-            white 1px,
-            transparent 2px
-        ),
-        radial-gradient(
-            circle at 50% 70%,
-            white 1px,
-            transparent 2px
-        ),
-        linear-gradient(
-            #080d1c,
-            #182442
-        );
-}
-
-
-/* BED */
-
-.room-bed {
-    position: absolute;
-
-    width: 430px;
-    height: 170px;
-
-    left: 13%;
-    bottom: 15%;
-
-    background: #18213a;
-
-    border-radius:
-        12px 12px 4px 4px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.4);
-
-    z-index: 11;
-}
-
-.pillow {
-    position: absolute;
-
-    width: 120px;
-    height: 55px;
-
-    left: 25px;
-    top: 20px;
-
-    background: #dce5f5;
-
-    border-radius: 12px;
-}
-
-.blanket {
-    position: absolute;
-
-    width: 270px;
-    height: 130px;
-
-    right: 15px;
-    top: 20px;
-
-    background: #29395e;
-
-    border-radius: 12px;
-}
-
-
-/* LAMP */
-
-.room-lamp {
-    position: absolute;
-
-    right: 18%;
-    bottom: 22%;
-
-    font-size: 35px;
-
-    color: white;
-
-    text-shadow:
-        0 0 10px white,
-        0 0 30px #9fc4ff;
-
-    z-index: 12;
-}
-
-
-/* BOOKS */
-
-.room-books {
-    position: absolute;
-
-    left: 18%;
-    bottom: 10%;
-
-    font-size: 35px;
-
-    z-index: 12;
 }
 
 
@@ -599,6 +750,7 @@ body {
     }
 }
 
+
 @keyframes float {
 
     0%, 100% {
@@ -610,6 +762,7 @@ body {
     }
 }
 
+
 @keyframes starsMove {
 
     from {
@@ -620,6 +773,7 @@ body {
         transform: translateY(-85px);
     }
 }
+
 
 @keyframes appear {
 
@@ -634,6 +788,7 @@ body {
     }
 }
 
+
 @keyframes popupIn {
 
     from {
@@ -644,6 +799,24 @@ body {
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+
+@keyframes letterOpen {
+
+    from {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(1);
     }
 }
 
@@ -682,15 +855,23 @@ body {
     .ocean {
         right: 7%;
     }
+
+    .letter-title {
+        font-size: 28px;
+    }
+
+    .envelope {
+        width: 220px;
+        height: 145px;
+    }
+
+    .envelope-flap {
+        border-left-width: 110px;
+        border-right-width: 110px;
+        border-top-width: 75px;
+    }
+
+    .letter-content {
+        padding: 45px 25px;
+    }
 }
-
-
-/* =========================
-   HIDDEN
-========================= */
-
-.hidden {
-    display: none !important;
-}
-
-
