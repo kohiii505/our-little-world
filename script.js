@@ -10,30 +10,21 @@ function enterWorld() {
 function openPlace(place) {
 
     const world = document.getElementById("world");
-
     const homeLetter = document.getElementById("home-letter");
 
     const popup = document.getElementById("popup");
-
     const title = document.getElementById("popup-title");
-
     const text = document.getElementById("popup-text");
 
-
-    // HOME
 
     if (place === "home") {
 
         world.style.display = "none";
-
         homeLetter.style.display = "block";
 
         return;
-
     }
 
-
-    // FOREST
 
     if (place === "forest") {
 
@@ -45,8 +36,6 @@ function openPlace(place) {
     }
 
 
-    // OCEAN
-
     if (place === "ocean") {
 
         title.textContent = "THE OCEAN";
@@ -57,8 +46,6 @@ function openPlace(place) {
     }
 
 
-    // OBSERVATORY
-
     if (place === "observatory") {
 
         title.textContent = "OBSERVATORY";
@@ -68,8 +55,6 @@ function openPlace(place) {
 
     }
 
-
-    // FUTURE
 
     if (place === "future") {
 
@@ -88,39 +73,29 @@ function openPlace(place) {
 
 function closePlace() {
 
-    const popup = document.getElementById("popup");
-
-    popup.style.display = "none";
+    document.getElementById("popup").style.display = "none";
 
 }
 
 
 function closeHome() {
 
-    const world = document.getElementById("world");
+    document.getElementById("home-letter").style.display = "none";
 
-    const homeLetter = document.getElementById("home-letter");
-
-    homeLetter.style.display = "none";
-
-    world.style.display = "block";
+    document.getElementById("world").style.display = "block";
 
 }
 
 
 function openLetter() {
 
-    const letter = document.getElementById("letter-content");
-
-    letter.style.display = "block";
+    document.getElementById("letter-content").style.display = "block";
 
 }
 
 
 function closeLetter() {
 
-    const letter = document.getElementById("letter-content");
-
-    letter.style.display = "none";
+    document.getElementById("letter-content").style.display = "none";
 
 }
