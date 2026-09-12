@@ -15,16 +15,6 @@ function openPlace(place) {
 
     const text = document.getElementById("popup-text");
 
-
-    function openPlace(place) {
-
-    const popup = document.getElementById("popup");
-
-    const title = document.getElementById("popup-title");
-
-    const text = document.getElementById("popup-text");
-
-
     if (place === "home") {
         document.getElementById("world").style.display = "none";
         document.getElementById("home-room").style.display = "block";
