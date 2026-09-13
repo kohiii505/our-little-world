@@ -1277,13 +1277,19 @@ body {
 
     opacity: 0.7;
 }
-
-
 /* =====================================================
    OBSERVATORY
 ===================================================== */
 
 #observatory-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
     background:
         radial-gradient(
             circle at 50% 40%,
@@ -1294,68 +1300,69 @@ body {
         );
 }
 
-.observatory-stars {
+
+/* ---------- TITLE ---------- */
+
+.observatory-title {
     position: absolute;
 
-    inset: 0;
+    z-index: 50;
 
-    pointer-events: none;
-
-    background-image:
-        radial-gradient(
-            white 1px,
-            transparent 1px
-        );
-
-    background-size: 70px 70px;
-
-    opacity: 0.4;
-}
-
-.observatory-heading {
-    position: absolute;
-
-    z-index: 20;
-
-    top: 10%;
     left: 50%;
+    top: 9%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
     width: 90%;
 
     text-align: center;
 }
 
-.observatory-heading p {
-    font-size: 10px;
-
+.observatory-title p {
+    font-size: 9px;
     letter-spacing: 5px;
 
-    opacity: 0.5;
+    opacity: 0.45;
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.observatory-heading h1 {
-    font-size: clamp(30px, 5vw, 52px);
+.observatory-title h1 {
+    font-size: clamp(32px, 5vw, 50px);
 
     font-weight: normal;
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.observatory-heading span {
+.observatory-title span {
     font-size: 13px;
 
-    opacity: 0.55;
+    opacity: 0.5;
 }
 
 
-/* CLICKABLE STARS */
+/* ---------- BACKGROUND STARS ---------- */
 
-.sky-star {
+.tiny-star {
+    position: absolute;
+
+    z-index: 10;
+
+    color: rgba(255,255,255,0.5);
+
+    pointer-events: none;
+
+    font-size: 12px;
+
+    text-shadow:
+        0 0 8px white;
+}
+
+
+/* ---------- SPECIAL STARS ---------- */
+
+.hidden-star {
     position: absolute;
 
     z-index: 100;
@@ -1365,54 +1372,54 @@ body {
 
     color: white;
 
-    font-size: 30px;
+    font-size: 25px;
 
     cursor: pointer;
 
     text-shadow:
-        0 0 12px white,
-        0 0 30px #91b5ff;
-
-    animation:
-        constellationFloat 5s ease-in-out infinite;
+        0 0 10px white,
+        0 0 25px #9abaff;
 
     transition:
-        transform 0.3s ease;
+        transform 0.4s ease,
+        opacity 0.4s ease;
+
+    animation:
+        starPulse 4s ease-in-out infinite;
 }
 
-.sky-star:hover {
-    transform:
-        scale(1.5);
+.hidden-star:hover {
+    transform: scale(1.5);
 }
 
-.sky-star-one {
-    left: 17%;
-    top: 30%;
+.important-one {
+    left: 26%;
+    top: 36%;
 }
 
-.sky-star-two {
-    right: 19%;
-    top: 34%;
+.important-two {
+    left: 57%;
+    top: 25%;
 
     animation-delay: 1s;
 }
 
-.sky-star-three {
-    left: 29%;
-    top: 58%;
+.important-three {
+    left: 74%;
+    top: 48%;
 
     animation-delay: 2s;
 }
 
-.sky-star-four {
-    right: 31%;
-    top: 61%;
+.important-four {
+    left: 42%;
+    top: 64%;
 
     animation-delay: 3s;
 }
 
 
-/* TELESCOPE */
+/* ---------- TELESCOPE ---------- */
 
 .telescope {
     position: absolute;
@@ -1425,8 +1432,7 @@ body {
     width: 210px;
     height: 170px;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
     pointer-events: none;
 }
@@ -1450,8 +1456,7 @@ body {
             #566785
         );
 
-    transform:
-        rotate(-12deg);
+    transform: rotate(-12deg);
 }
 
 .telescope-lens {
@@ -1487,16 +1492,17 @@ body {
 .left-leg {
     left: 90px;
 
-    transform:
-        rotate(15deg);
+    transform: rotate(15deg);
 }
 
 .right-leg {
     left: 112px;
 
-    transform:
-        rotate(-15deg);
+    transform: rotate(-15deg);
 }
+
+
+/* ---------- COUNTER ---------- */
 
 .observatory-counter {
     position: absolute;
@@ -1506,152 +1512,18 @@ body {
     bottom: 8%;
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
     font-size: 10px;
 
     letter-spacing: 3px;
 
     opacity: 0.6;
+
+    white-space: nowrap;
 }
 
 
-/* OBSERVATORY POPUP */
-
-#observatory-message {
-    display: none;
-
-    position: absolute;
-
-    z-index: 900;
-
-    left: 50%;
-    top: 50%;
-
-    transform:
-        translate(-50%, -50%);
-
-    width: min(500px, 85%);
-
-    padding: 45px;
-
-    background:
-        rgba(239,243,250,0.97);
-
-    color: #17213c;
-
-    text-align: center;
-
-    box-shadow:
-        0 30px 100px rgba(0,0,0,0.6);
-}
-
-.observatory-message-close {
-    position: absolute;
-
-    top: 12px;
-    right: 18px;
-
-    background: none;
-    border: none;
-
-    font-size: 27px;
-
-    color: #17213c;
-
-    cursor: pointer;
-}
-
-#star-message-small {
-    font-size: 9px;
-
-    letter-spacing: 4px;
-
-    opacity: 0.45;
-
-    margin-bottom: 18px;
-}
-
-#star-message-title {
-    font-size: 28px;
-
-    font-weight: normal;
-
-    margin-bottom: 20px;
-}
-
-#star-message-text {
-    line-height: 1.8;
-
-    opacity: 0.7;
-}
-
-
-/* OBSERVATORY COMPLETE */
-
-#observatory-complete {
-    display: none;
-
-    position: absolute;
-
-    z-index: 950;
-
-    left: 50%;
-    top: 50%;
-
-    transform:
-        translate(-50%, -50%);
-
-    width: min(560px, 85%);
-
-    padding: 50px;
-
-    background:
-        rgba(239,243,250,0.97);
-
-    color: #17213c;
-
-    text-align: center;
-
-    box-shadow:
-        0 30px 100px rgba(0,0,0,0.6);
-}
-
-#observatory-complete > div {
-    font-size: 35px;
-
-    margin-bottom: 20px;
-
-    text-shadow:
-        0 0 15px #91b5ff;
-}
-
-#observatory-complete > p {
-    font-size: 9px;
-
-    letter-spacing: 4px;
-
-    opacity: 0.45;
-
-    margin-bottom: 18px;
-}
-
-#observatory-complete h2 {
-    font-size: 29px;
-
-    font-weight: normal;
-
-    line-height: 1.4;
-
-    margin-bottom: 20px;
-}
-
-#observatory-complete span {
-    line-height: 1.8;
-
-    opacity: 0.65;
-}
 
 
 /* =====================================================
