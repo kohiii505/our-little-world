@@ -2915,88 +2915,9 @@ body {
             scale(1);
     }
 }
-} 
 /* =====================================================
-   FINAL FIXES — OCEAN / OBSERVATORY / MYSTERY
+   OBSERVATORY
 ===================================================== */
-
-/* ---------- OCEAN ---------- */
-
-#ocean-screen {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden !important;
-    z-index: 999 !important;
-    background: linear-gradient(
-        180deg,
-        #071827 0%,
-        #0b2638 45%,
-        #123d4c 100%
-    ) !important;
-}
-
-#ocean-screen .ocean-title {
-    position: absolute !important;
-    top: 13% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 80% !important;
-    text-align: center !important;
-    z-index: 20 !important;
-}
-
-#ocean-screen .ocean-title p,
-#ocean-screen .ocean-title h1,
-#ocean-screen .ocean-title span {
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-}
-
-#ocean-screen .ocean-water {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-}
-
-#ocean-screen .ocean-discovery {
-    position: absolute !important;
-    z-index: 30 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    cursor: pointer !important;
-}
-
-#ocean-screen .ocean-counter {
-    position: absolute !important;
-    bottom: 7% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 40 !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-}
-
-#ocean-screen #ocean-message,
-#ocean-screen #ocean-complete {
-    position: fixed !important;
-    z-index: 100 !important;
-}
-
-#ocean-screen .ocean-back {
-    position: absolute !important;
-    top: 30px !important;
-    left: 30px !important;
-    z-index: 100 !important;
-}
-
-
-/* ---------- OBSERVATORY ---------- */
 
 #observatory-screen {
     position: fixed !important;
@@ -3004,7 +2925,7 @@ body {
     width: 100vw !important;
     height: 100vh !important;
     overflow: hidden !important;
-    z-index: 999 !important;
+    z-index: 50 !important;
     background: linear-gradient(
         180deg,
         #050817 0%,
@@ -3013,9 +2934,16 @@ body {
     ) !important;
 }
 
+#observatory-screen .observatory-sky {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
 #observatory-screen .observatory-title {
     position: absolute !important;
-    top: 13% !important;
+    top: 12% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 80% !important;
@@ -3033,18 +2961,84 @@ body {
 #observatory-screen .tiny-star {
     position: absolute !important;
     z-index: 10 !important;
+    pointer-events: none !important;
 }
 
 #observatory-screen .hidden-star {
     position: absolute !important;
-    z-index: 50 !important;
+    z-index: 40 !important;
     cursor: pointer !important;
+    background: transparent !important;
+    border: none !important;
 }
+
+#observatory-screen .important-one {
+    top: 30%;
+    left: 22%;
+}
+
+#observatory-screen .important-two {
+    top: 38%;
+    left: 72%;
+}
+
+#observatory-screen .important-three {
+    top: 62%;
+    left: 35%;
+}
+
+#observatory-screen .important-four {
+    top: 70%;
+    left: 76%;
+}
+
+#observatory-screen .star-a { top: 22%; left: 12%; }
+#observatory-screen .star-b { top: 27%; left: 35%; }
+#observatory-screen .star-c { top: 18%; left: 60%; }
+#observatory-screen .star-d { top: 25%; left: 84%; }
+#observatory-screen .star-e { top: 45%; left: 15%; }
+#observatory-screen .star-f { top: 50%; left: 48%; }
+#observatory-screen .star-g { top: 43%; left: 90%; }
+#observatory-screen .star-h { top: 68%; left: 15%; }
+#observatory-screen .star-i { top: 78%; left: 28%; }
+#observatory-screen .star-j { top: 58%; left: 58%; }
+#observatory-screen .star-k { top: 80%; left: 52%; }
+#observatory-screen .star-l { top: 72%; left: 90%; }
+#observatory-screen .star-m { top: 35%; left: 52%; }
+#observatory-screen .star-n { top: 55%; left: 82%; }
+#observatory-screen .star-o { top: 84%; left: 72%; }
+#observatory-screen .star-p { top: 15%; left: 42%; }
 
 #observatory-screen .constellation-line {
     position: absolute !important;
-    z-index: 15 !important;
-    pointer-events: none !important;
+    height: 2px;
+    background: rgba(255,255,255,0.35);
+    transform-origin: left center;
+    opacity: 0;
+    z-index: 15;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+#observatory-screen .line-one {
+    width: 50%;
+    top: 30%;
+    left: 22%;
+    transform: rotate(12deg);
+}
+
+#observatory-screen .line-two {
+    width: 40%;
+    top: 38%;
+    left: 72%;
+    transform: rotate(145deg);
+}
+
+#observatory-screen .line-three {
+    width: 48%;
+    top: 62%;
+    left: 35%;
+    transform: rotate(18deg);
 }
 
 #observatory-screen .observatory-counter {
@@ -3059,6 +3053,8 @@ body {
 
 #observatory-screen .telescope {
     position: absolute !important;
+    right: 8% !important;
+    bottom: 8% !important;
     z-index: 25 !important;
 }
 
@@ -3073,57 +3069,4 @@ body {
     top: 30px !important;
     left: 30px !important;
     z-index: 100 !important;
-}
-
-
-/* ---------- MYSTERY ---------- */
-
-#mystery-screen {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden !important;
-    z-index: 999 !important;
-}
-
-#mystery-screen .mystery-background {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-}
-
-#mystery-screen .mystery-content {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: min(800px, 85vw) !important;
-    text-align: center !important;
-    z-index: 20 !important;
-}
-
-#mystery-screen .mystery-content p,
-#mystery-screen .mystery-content h1,
-#mystery-screen .mystery-content span {
-    display: block !important;
-    text-align: center !important;
-}
-
-#mystery-screen .mystery-button {
-    position: relative !important;
-    z-index: 30 !important;
-    cursor: pointer !important;
-}
-
-#mystery-screen .mystery-back {
-    position: absolute !important;
-    top: 30px !important;
-    left: 30px !important;
-    z-index: 100 !important;
-}
-
-#mystery-screen #future-message {
-    position: relative !important;
-    z-index: 30 !important;
 }
