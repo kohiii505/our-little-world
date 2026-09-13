@@ -2780,20 +2780,6 @@ body {
    OBSERVATORY
 ===================================================== */
 
-#observatory-screen {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden !important;
-    z-index: 50 !important;
-    background: linear-gradient(
-        180deg,
-        #050817 0%,
-        #090d27 55%,
-        #11183d 100%
-    ) !important;
-}
 
 #observatory-screen .observatory-sky {
     position: absolute;
