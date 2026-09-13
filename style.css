@@ -2294,17 +2294,6 @@ body {
    🔭 OBSERVATORY — NEW DESIGN
 ===================================================== */
 
-#observatory-screen {
-    background:
-        radial-gradient(
-            circle at 50% 45%,
-            #273b70 0%,
-            #111d42 38%,
-            #070b1c 72%,
-            #02030a 100%
-        );
-}
-
 .observatory-sky {
     position: absolute;
 
