@@ -1498,7 +1498,7 @@ body {
         rotate(-15deg);
 }
 
-.star-counter {
+.observatory-counter {
     position: absolute;
 
     z-index: 40;
